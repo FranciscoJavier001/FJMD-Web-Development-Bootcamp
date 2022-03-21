@@ -3,26 +3,33 @@
 -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Me</title>
-</head>
-<body>
-    <h1>My Contact Details</h1>
-    <p>Phone Number = 4491110087</p>
-    <p>E-Mail = user.streaming.001@gmail.com</p>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Me</title>
+    </head>
 
-    <form class="" action="index.html" method=""post></form>
-    <label>Your Name:</label> <!-- Es una etiqueta, donde puedo escribir algo -->
-    <input type="text" name="" value=""> <!-- Es el espacio del formulario -->
-    <input type="color" name="" value=""> <!-- Se hizo un submit(boton) con centro negro -->
-    <br> <!-- Un espacio hacia abajo -->
-    <!-- <label>Do you want to sign up to the email list?</label> Una etiqueta con este texto -->
-    <!-- <input type="checkbox" name="" value=""> Se hizo un campo que puedo dejar señalado -->
-    <label>Password:</label>
-    <input type="password" name="" value=""> <!-- Es un campo para contraseña, donde no se ve lo que escribes -->
-    <input type="submit" name=""> <!-- Este es el boton -->
-</body>
+    <body>
+        <h1>My Contact Details</h1>
+        <p>Phone Number = 4491110087</p>
+        <p>E-Mail = user.streaming.001@gmail.com</p>
+        <hr>
+
+        <form action="mailto:info@info.com" method="post" enctype="text/plain"> <!-- mailto:=A donde se manda el mail, encriptado=texto/plano -->
+            <label>Your Name:</label> <!-- Es una etiqueta, donde puedo escribir algo -->
+            <input type="text" name="yourName" value=""><br> <!-- Es el espacio del formulario, name=Cambio lo que dice el formulario en correo -->
+            <!-- <input type="color" name="" value=""> Se hizo un submit(boton) con centro negro -->
+            <!-- <br> Un espacio hacia abajo -->
+            <!-- <label>Do you want to sign up to the email list?</label> Una etiqueta con este texto -->
+            <!-- <input type="checkbox" name="" value=""> Se hizo un campo que puedo dejar señalado -->
+            <!-- <label>Password:</label>
+            <input type="password" name="" value=""> Es un campo para contraseña, donde no se ve lo que escribes -->
+            <label>Your Email:</label>
+            <input type="email" name="yourEmail" value=""><br>
+            <label>Your Message:</label><br>
+            <textarea name="yourMessage" rows="10" cols="27"></textarea><br> <!-- textarea=Campo del texto, rows=hacia abajo, col=los lados -->
+            <input type="submit" name=""> <!-- Este es el boton -->
+        </form>
+    </body>
 </html>
