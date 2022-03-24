@@ -1,0 +1,24 @@
+/*
+//**_______________________________________________________________________________________________________________________________________________*/
+    body{
+      background-color: #EAF6F6; /* Color suave al background */
+    }
+
+    h1, h3{ /* Change color to h* */
+        color: #66BFBF;
+    }
+    
+    hr{
+      /* background-color: gray; /* Linea gris */
+      border-style: none; /* Son los bordes, pero son los 4, definimos individualmente, o los configuramos manualmente */
+      border-top-style: dotted; /* Definimos el margen superior, y asi quedo */
+      /* height: 2px; /* La altura */
+      border-color: gray; /* Cambiamos el color del borde a gris */
+      border-width: 5px; /* La anchura de los bordes */
+      width: 2.5%; /* Recortamos el ancho */
+    }
+
+
+    /* img{ Para recorle tamaño a la imagen */
+      /* height: 20px; */
+    /* } */
