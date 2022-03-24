@@ -6,11 +6,10 @@ h1{
     color: red; /* Color Letra */
     font-size: 200px; /* Tamaño de texto */
 }
-/* 
-img{
-    background-color: red;
+
+img:hover{ /* hover=Para que al pasar por encima */
+    background-color: gold;
 }
-*/
 
 /* Class Selectors */
 .bacon{ /* Cambios a la imagen */
@@ -19,4 +18,17 @@ img{
 
 .broccoli{ /* Cambios a la imagen */
     background-color: red; /* Background */
+}
+
+.circular{
+    border-radius: 100%;
+}
+
+/* Id Selectors */
+#heading {
+    color: blue;
+}
+
+#big{
+    font-size: 3000px;
 }
