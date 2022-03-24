@@ -1,11 +1,22 @@
 /*
 //**_______________________________________________________________________________________________________________________________________________*/
 
+/* Tag Selectors */
 h1{ 
     color: red; /* Color Letra */
     font-size: 200px; /* Tamaño de texto */
 }
+/* 
+img{
+    background-color: red;
+}
+*/
 
-img{ /* Cambios a la imagen */
+/* Class Selectors */
+.bacon{ /* Cambios a la imagen */
+    background-color: green; /* Background */
+}
+
+.broccoli{ /* Cambios a la imagen */
     background-color: red; /* Background */
 }
