@@ -10,27 +10,20 @@ h1{
 
 .top-container{
     background-color: #E0EBE8;
-    border-style: solid;
-    border-width: 10px;
-    height: 200px;
-    padding: 20px;
-    width: 200px;
 }
 
 .middle-container{
     background-color: red;
-    margin-left: 17%;
-    border-style: solid;
-    border-width: 20px;
     height: 200px;
     width: 200px;
 }
 
 .bottom-container{
-    background-color: gold;
-    margin-left: 32.7%;
-    border-style: solid;
-    border-width: 10px;
+    background-color: blue;
     height: 200px;
     width: 200px;
+}
+
+.pro{
+    text-decoration: underline;
 }
