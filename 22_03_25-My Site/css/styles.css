@@ -1,6 +1,7 @@
 /*
 //**_______________________________________________________________________________________________________________________________________________*/
-/* body{
+/* 
+body{
     margin: 0; /* Recuerda siempre mantenerlo en 0 *
 }
 
@@ -12,13 +13,20 @@ h1{
     background-color: #E0EBE8;
 } */
 
+.container{
+    position: relative;
+    background-color: gray;
+    height: 300px;
+    width: 302px;
+}
+
 .top-container-1{
     background-color: red;
     height: 100px;
     width: 100px;
     position: absolute;
-    top: 209px;
-    left: 209px;
+    top: 0px;
+    left: 202px;
 }
 
 .middle-container{
@@ -27,7 +35,7 @@ h1{
     width: 100px;
     position: absolute;
     left: 108px;
-    top: 108px;
+    top: 8px;
 }
 
 .bottom-container{
@@ -35,6 +43,9 @@ h1{
     height: 100px;
     width: 100px;
     position: absolute;
+    /* position: fixed; Con este se mantiene estatico el elemento */
+    top: 8px;
+
 }
 
 .pro{
