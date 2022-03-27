@@ -1,6 +1,6 @@
 /*
 //**_______________________________________________________________________________________________________________________________________________*/
-body{
+/* body{
     margin: 0;
 }
 
@@ -10,18 +10,33 @@ h1{
 
 .top-container{
     background-color: #E0EBE8;
-}
+} */
 
-.middle-container{
+.top-container-1{
+    display: inline-block;
     background-color: red;
     height: 200px;
     width: 200px;
+    position: relative;
+    left: 380px;
 }
 
-.bottom-container{
+.middle-container{
+    display: inline-block;
     background-color: blue;
     height: 200px;
     width: 200px;
+    position: relative;
+    right: 210px;
+}
+
+.bottom-container{
+    display: inline-block;
+    background-color: yellow;
+    height: 200px;
+    width: 200px;
+    position: relative;
+    right: 220px;
 }
 
 .pro{
