@@ -2,15 +2,35 @@
 //**_______________________________________________________________________________________________________________________________________________*/
 /* position: fixed; Con este se mantiene estatico el elemento */
 
+/* #title{ /* Ejemplo de como poner una letra, utilice este id en el index */
+    /* font-family: "Brush Script MT" ,cursive; 
+    font-size: 80px; 
+    font-style: italic; 
+    font-variant: small-caps; 
+    font-weight: 100; 
+    line-height: 40px;
+} */
+
 body{
     margin: 0; /* Recuerda siempre mantenerlo en 0 */
     text-align: center; /* Centramos texto */
+    /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
+    font-family: 'Merriweather', serif;
 }
 
 h1{
     margin-top: 0;
     /* width: 10%; /* Al hacer esto, es lo que mide a lo ancho y se queda lado izquiero */
     /* margin: 0 auto 0 auto; /* Con esto lo vuelvo a centrar aunque haya definido width - (Top-Right-Bottom-Left) */
+    font-family: 'Sacramento', cursive;
+}
+
+h2{
+    font-family: 'Montserrat', sans-serif;
+}
+
+h3{
+    font-family: 'Montserrat', sans-serif;
 }
 
 .top-container{ /* Recuerda, las clases con CSS ocupan puntos, id con # */
