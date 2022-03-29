@@ -39,16 +39,13 @@ h3{
     padding-top: 100px;
 }
 
+#profile_img{
+    border-radius: 50%;
+}
 .middle-container{
-    background-color: red;
-    height: 200px;
-    width: 200px;
 }
 
 .bottom-container{
-    background-color: blue;
-    height: 200px;
-    width: 200px;
 }
 
 .pro{
