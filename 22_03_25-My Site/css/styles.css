@@ -16,21 +16,30 @@ body{
     text-align: center; /* Centramos texto */
     /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
     font-family: 'Merriweather', serif;
+    font-size: 2rem;
 }
 
 h1{
-    margin-top: 0;
-    /* width: 10%; /* Al hacer esto, es lo que mide a lo ancho y se queda lado izquiero */
-    /* margin: 0 auto 0 auto; /* Con esto lo vuelvo a centrar aunque haya definido width - (Top-Right-Bottom-Left) */
+    color: #66BFBF;
     font-family: 'Sacramento', cursive;
+    font-size: 5.625rem; /* rem=16px */
+    /* font-size: 562.5%; /* % sale como px/16*100 */
+    line-height: 2;
+    margin: 50px auto 0 auto; /* (Top-Right-Bottom-Left) */
+    /* margin: 0 auto 0 auto; /* Con esto lo vuelvo a centrar aunque haya definido width - (Top-Right-Bottom-Left) */
+    /* width: 10%; /* Al hacer esto, es lo que mide a lo ancho y se queda lado izquiero */
 }
 
 h2{
+    color: #66BFBF;
     font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: normal;
 }
 
 h3{
     font-family: 'Montserrat', sans-serif;
+    color: #11999E;
 }
 
 .top-container{ /* Recuerda, las clases con CSS ocupan puntos, id con # */
@@ -46,6 +55,10 @@ h3{
 }
 
 .bottom-container{
+}
+
+a{
+    color: #11999E;
 }
 
 .pro{
