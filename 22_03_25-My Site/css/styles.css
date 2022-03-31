@@ -16,7 +16,6 @@ body{
     text-align: center; /* Centramos texto */
     /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
     font-family: 'Merriweather', serif;
-    font-size: 2rem;
 }
 
 h1{
@@ -38,27 +37,35 @@ h2{
 }
 
 h3{
+    color: #11999E;
     font-family: 'Montserrat', sans-serif;
+}
+
+a{
     color: #11999E;
 }
 
 .top-container{ /* Recuerda, las clases con CSS ocupan puntos, id con # */
-    background-color: #E0EBE8;
+    background-color: #E4F9F5;
     position: relative;
     padding-top: 100px;
 }
 
-#profile_img{
+/* #profile_img{
     border-radius: 50%;
-}
+} */
+
 .middle-container{
 }
 
 .bottom-container{
 }
 
-a{
-    color: #11999E;
+.skill-row{
+    margin: 100px auto 100px auto; /* Con esto lo vuelvo a centrar aunque haya definido width - (Top-Right-Bottom-Left) */
+    text-align: left;
+    width: 50%;
+    line-height: 2;
 }
 
 .pro{
@@ -69,11 +76,23 @@ a{
     /* margin: 30px 0px 0px 400px; /* Acomode la nube superior - (Asi realice el ejercicio) */
     position: absolute;
     right: 300px;
-    top: 50px;
+    top: 40px;
 }
 
 .bottom-cloud{
     position: absolute; /* Subi la nube hasta donde inicia la etiqueta */
-    left: 300px;
+    left: 250px;
     bottom: 300px;
+}
+
+.code-img {
+    width: 25%;
+    float: left;
+    margin-right: 30px;
+}
+
+.chilli-img {
+    width: 25%;
+    float: right;
+    margin-left: 30px;
 }
