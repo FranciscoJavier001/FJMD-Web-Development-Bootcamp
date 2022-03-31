@@ -24,7 +24,7 @@ h1{
     font-family: 'Sacramento', cursive;
     font-size: 5.625rem; /* rem=16px */
     /* font-size: 562.5%; /* % sale como px/16*100 */
-    line-height: 2;
+    /* line-height: 2; */
     margin: 50px auto 0 auto; /* (Top-Right-Bottom-Left) */
     /* margin: 0 auto 0 auto; /* Con esto lo vuelvo a centrar aunque haya definido width - (Top-Right-Bottom-Left) */
     /* width: 10%; /* Al hacer esto, es lo que mide a lo ancho y se queda lado izquiero */
