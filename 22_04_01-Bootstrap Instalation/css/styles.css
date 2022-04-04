@@ -16,9 +16,16 @@ body{
 }
 
 h1{
-    font-family: 'Montserrat-Black', sans-serif;
+    font-family: 'Montserrat-Black';
     font-size: 4rem;
     font-weight: 900;
+    line-height: 1.5;
+}
+
+h2{
+    font-family: "Montserrat-Bold";
+    font-size: 4rem;
+    font-weight: bold;
     line-height: 1.5;
 }
 
@@ -77,4 +84,28 @@ p{
 
 .icon:hover{
     color: #FF4C68;
+}
+
+#testimonials{
+    color: #FFF;
+    background-color: #EF8172;
+    padding: 7% 15%;
+    text-align: center;
+}
+
+.testimonial-image{
+    width: 10%;
+    border-radius: 100%;
+    margin: 20px;
+}
+
+#press{
+    background-color: #EF8172;
+    text-align: center;
+    padding-bottom: 3%;
+}
+
+.press-logo{
+    width: 15%;
+    margin: 20px 20px 50px;
 }
