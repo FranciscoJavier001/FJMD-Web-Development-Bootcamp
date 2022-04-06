@@ -149,13 +149,13 @@ p{
     background-color: #FF4C68;
     color: #FFF;
     text-align: center;
-    padding: 6%;
+    padding: 7% 14%;
 }
 
-#cta-h3{
+.cta-heading{
     font-size: 4rem;
     margin: auto;
-    width: 70%;
+    line-height: 1.5;
 }
 
 .cta-btn{
@@ -169,6 +169,6 @@ p{
 }
 
 .fa-footer{
-    margin-bottom: 1%;
+    margin: 1%;
     margin-right: .5%;
 }
