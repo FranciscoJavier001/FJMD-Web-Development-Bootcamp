@@ -1,6 +1,8 @@
 /* 
 //**_______________________________________________________________________________________________________________________________________________*/
 /* Refactoring Code that's mean to put the customize Css attribute in the same space and do not repit it */
+/* Codificacion bonita .classname #id { XXX } */
+
 body{
     font-family: 'Montserrat-Black', sans-serif;
 }
