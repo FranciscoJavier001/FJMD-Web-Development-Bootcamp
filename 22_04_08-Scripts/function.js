@@ -16,3 +16,12 @@
 
 // const resultado = bmiCalculator() //** Una variable que almacene el resultado */
 // console.log("BMI is equal to " + resultado);
+
+//**_______________________________________________________________________________________________________________________________________________*/
+const name1 = prompt("Your Name")
+const name2 = prompt("Crush Name") 
+
+const number = Math.random()
+
+const resultado = Math.floor(number*100)
+console.log(name1 + " " + name2 + " are compatible in a " + resultado + "%");
