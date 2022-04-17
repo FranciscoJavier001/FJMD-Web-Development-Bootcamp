@@ -23,5 +23,10 @@ const name2 = prompt("Crush Name")
 
 const number = Math.random()
 
-const resultado = Math.floor(number*100)
-console.log(name1 + " " + name2 + " are compatible in a " + resultado + "%");
+const resultado = Math.floor(number*100)+1
+
+if ( resultado >=80) {
+    alert("This is Love " + name1 + " " + name2 + " are compatible in a " + resultado + "%")
+} else {
+    alert("Is Pasion " + name1 + " " + name2 + " are compatible in a " + resultado + "%")
+}
