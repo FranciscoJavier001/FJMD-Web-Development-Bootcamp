@@ -6,13 +6,13 @@
 
 // bmi debe de ser igual al rededor de 20 en este caso
 
-const weight = prompt("Weight")
-const height = prompt("Height")
-function bmiCalculator() {
+// const weight = prompt("Weight")
+// const height = prompt("Height")
+// function bmiCalculator() {
 
-    const bmi = Math.round(weight / Math.pow(height, 2));
-    return bmi;
-}
+//     const bmi = Math.round(weight / Math.pow(height, 2));
+//     return bmi;
+// }
 
-const resultado = bmiCalculator() //** Una variable que almacene el resultado */
-console.log("BMI is equal to " + resultado);
+// const resultado = bmiCalculator() //** Una variable que almacene el resultado */
+// console.log("BMI is equal to " + resultado);
