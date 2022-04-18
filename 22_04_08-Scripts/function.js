@@ -32,16 +32,26 @@
 // }
 
 //**_______________________________________________________________________________________________________________________________________________*/
-function bmiCalculator(weight, height) { //** Funcion que recibe esos parametros */
+// function bmiCalculator(weight, height) { //** Funcion que recibe esos parametros */
 
-  var interpretation = weight / Math.pow(height, 2); //** Instrucciones de la variable interpretation */
+//   var interpretation = weight / Math.pow(height, 2); //** Instrucciones de la variable interpretation */
 
-  if (interpretation <= 18.5) {
-    return "Your BMI is " + interpretation + ", so you are underweight.";
-  } else if (interpretation > 18.5 && interpretation <= 24.9) {
-    return "Your BMI is " + interpretation + ", so you have a normal weight.";
-  } else if (interpretation > 24.9) {
-    return "Your BMI is " + interpretation + ", so you are overweight.";
-  }
-  return interpretation;
+//   if (interpretation <= 18.5) {
+//     return "Your BMI is " + interpretation + ", so you are underweight.";
+//   } else if (interpretation > 18.5 && interpretation <= 24.9) {
+//     return "Your BMI is " + interpretation + ", so you have a normal weight.";
+//   } else if (interpretation > 24.9) {
+//     return "Your BMI is " + interpretation + ", so you are overweight.";
+//   }
+//   return interpretation;
+// }
+
+//**_______________________________________________________________________________________________________________________________________________*/
+let year = prompt("Ingrese el año") //** Como le voy a pasar el parseInt hay que hacerla let */
+year = parseInt(year) //** Lo hacemos un int */
+
+if ((year % 4 == 0) && (year % 100 != 0 || year % 400 == 0)) { //** Condiciones para confirmar que sea año bisiesto */
+    alert("El año " + year + " es Biciesto")
+} else {
+    alert("El año " + year + " no es Biciesto")
 }
