@@ -128,3 +128,15 @@
 // }
 
 //**_______________________________________________________________________________________________________________________________________________*/
+function whosPaying(names) { //** Declaramos la funcion y dentro pongo lo que recibe */
+
+    names = ["Angela", "Ben", "Jenny", "Michael", "Chloe"] //** Este es el arreglo de posiciones */
+
+    let numberPersons = names.length //** Asi pong el arreglo con los elementos en numeros que tiene, osea 5 */
+    let numberWhosPaying = Math.floor(Math.random() * numberPersons) //** floor(redondeo) y random(aleatorio) y limito con el arreglo de arriba */
+    let loosePerson = names[numberWhosPaying] //** Asi le asigno un numero a la persona que perdio */
+
+    return loosePerson + " is going to buy lunch today!"
+
+    whosPaying() //** Llamo la funcion desde el navegador y me da un resultado en consola */
+}
