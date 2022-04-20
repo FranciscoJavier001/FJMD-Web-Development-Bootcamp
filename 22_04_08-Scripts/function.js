@@ -92,13 +92,13 @@
 // }
 //**_______________________________________________________________________________________________________________________________________________*/
 //** Array */
-var guestList = ["Angela", "Jack", "Pam", "James", "Lara", "Jason"];
+// var guestList = ["Angela", "Jack", "Pam", "James", "Lara", "Jason"];
 
-var guestName = prompt("What is your name?") //** Vamos a agregar un nuevo usuario en el arreglo */
+// var guestName = prompt("What is your name?") //** Vamos a agregar un nuevo usuario en el arreglo */
 
-//** Si no esta en la lista me regresa un false "Sorry xxx", si esta en la lista me regresa un true "Welcome" */
-if (guestList.includes(guestName)) {
-    alert("Welcome!")
-} else {
-    alert("Sorry, maybe next times")
-}
+// //** Si no esta en la lista me regresa un false "Sorry xxx", si esta en la lista me regresa un true "Welcome" */
+// if (guestList.includes(guestName)) {
+//     alert("Welcome!")
+// } else {
+//     alert("Sorry, maybe next times")
+// }
