@@ -90,6 +90,7 @@
 //         return "Not leap year."
 //     }
 // }
+
 //**_______________________________________________________________________________________________________________________________________________*/
 //** Array */
 // var guestList = ["Angela", "Jack", "Pam", "James", "Lara", "Jason"];
@@ -102,3 +103,28 @@
 // } else {
 //     alert("Sorry, maybe next times")
 // }
+
+//**_______________________________________________________________________________________________________________________________________________*/
+//** Otro ejercicio de Array */
+// output.push() //** Asi le meto algo a un arreglo, con includes, somo le decia si estaba incluido en el arreglo, con pop lo borro */
+// var output = []
+// var count = 1 //** Solo debi crear una variable donde almacenara el numero */
+
+// function fizzBuzz() {
+
+//     if(count % 3 === 0 && count % 5 === 0){
+//         output.push("Fizz/Buzz")
+//     } else if( count % 3 === 0){
+//         output.push("Fizz")
+//     } else if (count % 5 === 0){
+//         output.push("Buzz")
+//     } else {
+//         output.push(count) //** Asi agrego un numero definido en count a un arreglo */
+//     }
+    
+//     count++ //** Asi los voy poniendo pero sumando el numero pero para que salga */
+    
+//     console.log(output);
+// }
+
+//**_______________________________________________________________________________________________________________________________________________*/
