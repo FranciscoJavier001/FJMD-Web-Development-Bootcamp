@@ -47,11 +47,47 @@
 // }
 
 //**_______________________________________________________________________________________________________________________________________________*/
-let year = prompt("Ingrese el año") //** Como le voy a pasar el parseInt hay que hacerla let */
-year = parseInt(year) //** Lo hacemos un int */
+// let year = prompt("Ingrese el año") //** Como le voy a pasar el parseInt hay que hacerla let */
+// year = parseInt(year) //** Lo hacemos un int */
 
-if ((year % 4 == 0) && (year % 100 != 0 || year % 400 == 0)) { //** Condiciones para confirmar que sea año bisiesto */
-    alert("El año " + year + " es Biciesto")
-} else {
-    alert("El año " + year + " no es Biciesto")
-}
+// if ((year % 4 == 0) && (year % 100 != 0 || year % 400 == 0)) { //** Condiciones para confirmar que sea año bisiesto */
+//     alert("El año " + year + " es Biciesto")
+// } else {
+//     alert("El año " + year + " no es Biciesto")
+// }
+
+//**_______________________________________________________________________________________________________________________________________________*/
+//** Ejercicio resuelto en el Ejercicio */
+// function isLeap(year) {
+    
+    /**************Don't change the code above****************/    
+        
+        //Write your code here.    
+        // if((year % 4 === 0) && (year % 100 !== 0 || year % 400 === 0)){
+        //     console.log("Leap year.");
+        // } else {
+        //     console.log("Not leap year.");
+        // }
+    
+    /**************Don't change the code below****************/    
+    
+    // }
+
+//**_______________________________________________________________________________________________________________________________________________*/
+//** Asi hizo el ejercicio esta Angela */
+// function isLeap(year) { //** La funcion recibe este argumento */
+//     if(year % 4 === 0 ) { //** Pone demasiados If y eso puede ser confuso */
+//         if (year % 100 === 0) {
+//             if (year % 400 === 0) {
+//                 return "Leap year.";
+//             } else {
+//                 return "Not leap year.";
+//             }
+//         } else {
+//             return "Leap year."
+//         }
+//     } else {
+//         return "Not leap year."
+//     }
+// }
+//**_______________________________________________________________________________________________________________________________________________*/
