@@ -59,19 +59,19 @@
 //**_______________________________________________________________________________________________________________________________________________*/
 //** Ejercicio resuelto en el Ejercicio */
 // function isLeap(year) {
-    
-    /**************Don't change the code above****************/    
-        
-        //Write your code here.    
-        // if((year % 4 === 0) && (year % 100 !== 0 || year % 400 === 0)){
-        //     console.log("Leap year.");
-        // } else {
-        //     console.log("Not leap year.");
-        // }
-    
-    /**************Don't change the code below****************/    
-    
-    // }
+
+/**************Don't change the code above****************/
+
+//Write your code here.
+// if((year % 4 === 0) && (year % 100 !== 0 || year % 400 === 0)){
+//     console.log("Leap year.");
+// } else {
+//     console.log("Not leap year.");
+// }
+
+/**************Don't change the code below****************/
+
+// }
 
 //**_______________________________________________________________________________________________________________________________________________*/
 //** Asi hizo el ejercicio esta Angela */
@@ -121,9 +121,9 @@
 //     } else {
 //         output.push(count) //** Asi agrego un numero definido en count a un arreglo */
 //     }
-    
+
 //     count++ //** Asi los voy poniendo pero sumando el numero pero para que salga */
-    
+
 //     console.log(output);
 // }
 
@@ -151,6 +151,30 @@
 //     let numeroGanador = numero[numeroSalido]
 
 //     return numeroGanador + " ese sale"
+// }
+
+//**_______________________________________________________________________________________________________________________________________________*/
+// let output = []; //** El inicio del arreglo */
+// let count = 1; //** Siempre confirma que ya tengas el contador */
+
+// function fizzBuzz() {
+
+//   while (count <= 100) { //** La sentencia del While */
+
+//     if (count % 3 === 0 && count % 5 === 0) {
+//       output.push("Fizz/Buzz");
+//     } else if (count % 3 === 0) {
+//       output.push("Fizz");
+//     } else if (count % 5 === 0) {
+//       output.push("Buzz");
+//     } else {
+//       output.push(count);
+//     }
+
+//     count++; //** Despues de ejecutar esas instrucciones que siempre aumente 1 */
+//   }
+
+//   console.log(output); //** Ya fuera de las instrucciones, voy a mostrar en consola */
 // }
 
 //**_______________________________________________________________________________________________________________________________________________*/
