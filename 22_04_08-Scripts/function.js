@@ -155,7 +155,7 @@
 
 //**_______________________________________________________________________________________________________________________________________________*/
 // let output = []; //** El inicio del arreglo */
-// let count = 1; //** Siempre confirma que ya tengas el contador */
+// let count = 1; //** Siempre confirma que ya tengas el count */
 
 // function fizzBuzz() {
 
@@ -178,3 +178,23 @@
 // }
 
 //**_______________________________________________________________________________________________________________________________________________*/
+//** Para poder cambiar el nombre hay que escribir cmd+shift+l */
+
+let count = 99 //** Declaro la variable */
+
+function bottlesOfBeer(){ //** Funcion que no recibe argumentos */
+
+    while(count > 0) {
+
+        if (count >= 2) {
+            console.log(`Tengo ${count} botellas de cerveza, de ${count} botellas de cerveza. Toma 1 y pasala. ahora hay ${count - 1} cervezas`);
+        } else if (count === 1) {
+            console.log(`Tengo ${count} botella de cerveza en, de ${count} botella de cerveza. Toma 1 y pasala. ${count - 1} cervezas tengo`);
+        }
+        count = count - 1
+    }
+
+    if ( count === 0) {
+        console.log(`Ya no tengo cervezas, voy a ir a la tienda a comprar 99 mas y tenerlas en la pared`);
+    }
+}
