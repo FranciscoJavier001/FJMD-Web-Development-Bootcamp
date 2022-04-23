@@ -180,21 +180,45 @@
 //**_______________________________________________________________________________________________________________________________________________*/
 //** Para poder cambiar el nombre hay que escribir cmd+shift+l */
 
-let count = 99 //** Declaro la variable */
+// let count = 99 //** Declaro la variable */
 
-function bottlesOfBeer(){ //** Funcion que no recibe argumentos */
+// function bottlesOfBeer(){ //** Funcion que no recibe argumentos */
 
-    while(count > 0) {
+//     while(count > 0) {
 
-        if (count >= 2) {
-            console.log(`Tengo ${count} botellas de cerveza, de ${count} botellas de cerveza. Toma 1 y pasala. ahora hay ${count - 1} cervezas`);
-        } else if (count === 1) {
-            console.log(`Tengo ${count} botella de cerveza en, de ${count} botella de cerveza. Toma 1 y pasala. ${count - 1} cervezas tengo`);
-        }
-        count = count - 1
-    }
+//         if (count >= 2) {
+//             console.log(`Tengo ${count} botellas de cerveza, de ${count} botellas de cerveza. Toma 1 y pasala. ahora hay ${count - 1} cervezas`);
+//         } else if (count === 1) {
+//             console.log(`Tengo ${count} botella de cerveza, de ${count} botella de cerveza. Toma 1 y pasala. ${count - 1} cervezas tengo`);
+//         }
+//         count = count - 1 //** El contador, saliendo del else if, para reste desde aqui */
+//     }
 
-    if ( count === 0) {
-        console.log(`Ya no tengo cervezas, voy a ir a la tienda a comprar 99 mas y tenerlas en la pared`);
-    }
-}
+//     if ( count === 0) { //** Esto va a pasar cuando ya no tenga cervezas */
+//         console.log(`Ya no tengo cervezas, voy a ir a la tienda a comprar 99 mas y tenerlas en la pared`);
+//     }
+// }
+
+//**_______________________________________________________________________________________________________________________________________________*/
+
+// let output = []; //** El inicio del arreglo */
+
+// function fizzBuzz() {
+
+//   for (count = 1; count <= 100; count ++ ) { //** Aqui lo que hago es que inicio el contador, pongo la sentencia e instrucciones a realizar */
+
+//     if (count % 3 === 0 && count % 5 === 0) {
+//       output.push("Fizz/Buzz");
+//     } else if (count % 3 === 0) {
+//       output.push("Fizz");
+//     } else if (count % 5 === 0) {
+//       output.push("Buzz");
+//     } else {
+//       output.push(count);
+//     } 
+//   }
+
+//   console.log(output); //** Ya fuera de las instrucciones, voy a mostrar en consola */
+// }
+
+//**_______________________________________________________________________________________________________________________________________________*/
