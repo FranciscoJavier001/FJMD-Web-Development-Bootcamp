@@ -224,24 +224,44 @@
 //**_______________________________________________________________________________________________________________________________________________*/
 //** Solo son los primeros dos numeros, yo lo haria con length - 2 */
 
-//** Creo una funcion que reciba un limite */
+// let n = prompt("Ingresa un valor") //** Asi pedimos el numero */
+// function generarFibonacci(n){ //** Declaramos la funcion que reciba n en el prompt de arriba */
 
-let n = prompt("Ingresa un valor") //** Asi pedimos el numero */
-function generarFibonacci(n){ //** Declaramos la funcion que reciba n en el prompt de arriba */
+//     const fib = [0, 1]; //** Aqui tenemos que asignarle un numero para que funcione */
 
-    const fib = [0, 1]; //** Aqui tenemos que asignarle un numero para que funcione */
+//     for (let i = 2; i < n; i++){ //** Declaramos un for, con la variable i, que tenga un numero de limite y lo que va a hacer */
+//         fib[i] = fib[i - 1] + fib[i - 2] //** La nueva variable son los ultimos arreglos */
+//     }
+//     return fib //** Regreamos fib */
+// }
 
-    for (let i = 2; i < n; i++){ //** Declaramos un for, con la variable i, que tenga un numero de limite y lo que va a hacer */
-        fib[i] = fib[i - 1] + fib[i - 2] //** La nueva variable son los ultimos arreglos */
-    }
-    return fib //** Regreamos fib */
-}
+// const fibSerie = generarFibonacci(n) //** Constante que recibe n */
+// const ul = document.getElementById("fib") //** Lo mostramos en el index y que aparezca */
 
-const fibSerie = generarFibonacci(n) //** Constante que recibe n */
-const ul = document.getElementById("fib") //** Lo mostramos en el index y que aparezca */
+// fibSerie.forEach(number => { //** Por cada for que aparezca un numero */
+//     const li = document.createElement("li") //** Se va a crear un li */
+//     li.innerHTML = number //** Asi aparece el li, pero con el numero de cada arreglo */
+//     ul.append(li) //** Que cada ul apareza un li */
+// })
 
-fibSerie.forEach(number => { //** Por cada for que aparezca un numero */
-    const li = document.createElement("li") //** Se va a crear un li */
-    li.innerHTML = number //** Asi aparece el li, pero con el numero de cada arreglo */
-    ul.append(li) //** Que cada ul apareza un li */
-})
+//**_______________________________________________________________________________________________________________________________________________*/
+// function fibonacciGenerator(n) {
+
+//     let output = []
+//     if (n === 1) {
+//         output = [0]
+//     } else if (n === 2) {
+//         output = [0,1]
+//     } else {
+//         output = [0,1]
+
+//         for (var i = 2; i < n; i++){
+//             output.push(output[output.length - 2] + output[output.length - 1])
+//         }
+//     }
+
+//     return output
+// }
+
+// output = fibonacciGenerator()
+// console.log(output);
