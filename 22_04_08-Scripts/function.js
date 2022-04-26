@@ -245,43 +245,69 @@
 // })
 
 //**_______________________________________________________________________________________________________________________________________________*/
-let n = prompt("Ingresa un numero")
+// let n = prompt("Ingresa un numero")
 
-function fibonacciGenerator(n) { //** Declaramos una funcion que recibe un numero */
+// function fibonacciGenerator(n) { //** Declaramos una funcion que recibe un numero */
     
-    let output = []
-    if (n === 1) {
-        console.log('uno')
-        output = [0]
-    } else if (n === 2) {
-        console.log('dos')
-        output = [0,1]
-    } else {
-        console.log('elsw')
-        output = [0,1]
+//     let output = []
+//     if (n === 1) {
+//         console.log('uno')
+//         output = [0]
+//     } else if (n === 2) {
+//         console.log('dos')
+//         output = [0,1]
+//     } else {
+//         console.log('elsw')
+//         output = [0,1]
 
-        for (var i = 2; i < 10; i++){
-            output.push(output[output.length - 2] + output[output.length - 1])
-        }
-    }
+//         for (var i = 2; i < 10; i++){
+//             output.push(output[output.length - 2] + output[output.length - 1])
+//         }
+//     }
 
-    return output
-}
+//     return output
+// }
 
-output = fibonacciGenerator()
-console.log(output);
+// output = fibonacciGenerator()
+// console.log(output);
 
 //**_______________________________________________________________________________________________________________________________________________*/
-//** Con prompt pedimos un numero */
-//** Declaramos la funcion y recibe el numero de arriba que pedimos */
+// function fibonacciGenerator(n) { //** Declaramos una funcion que recibe un numero */
 
-//** Creamos una variable de salida */
-//** Declaramos un if donde si solo pido un argumento, variable de salida solo la posicion 0 */
+//     n = prompt("Ingresa un numero")
+
+//     let output = []
+
+//     if (n === 1) {
+//         output = [0]
+//     } else if (n === 2) {
+//         output = [0,1]
+//     } else {
+//         output = [0,1]
+
+//         for (var i = 2; i < n; i++){
+//             output.push(output[output.length - 2] + output[output.length - 1])
+//         }
+//     }
+
+//     return output
+// }
+
+// output = fibonacciGenerator()
+// console.log(output);
+
+//**_______________________________________________________________________________________________________________________________________________*/
+//** Declaramos la funcion y recibe el numero de arriba que pedimos */
+//** Con prompt pedimos un numero */
+
+//** Creamos un arreglo de salida, lo inicializamos vacio */
+
+//** Declaramos un if donde si pido 1 argumento, variable de salida solo la posicion 0 */
 //** Declaramos otro else if donde si el numero tiene 2 variable de salida 2 posiciones de numeros */
 //** Declaramos la variable de las demas, donde se van a estar usando las variables 0 y 1  */
 
-//** Hacemos un ciclo, donde la variable sea 2, luego una donde i sea menor a n, y otra donde se va a sumar */
-//** La variable de salida, va con un push, le pasamos la variable de salida en la posicion 2 y la sumamos con la de la posicion 1 */
+//** Hacemos un ciclo, donde la variable sea igual a 2, luego una donde i sea menor al numero, y otra donde se va a incrmentar */
+//** La variable de salida, va con un push, en parentesis le pasamos la variable de salida en la posicion 2 y la sumamos con la de la posicion 1 */
 
 //** Retornamos la variable de salida */
 
@@ -290,27 +316,28 @@ console.log(output);
 
 //**_______________________________________________________________________________________________________________________________________________*/
 
-// function fibonacciGenerator() { //** Declaramos una funcion que recibe un numero */
+function fibonacci(n) { //** Declara+mos una funcion */
 
-    //     let n = prompt("Ingresa un numero")
-    //     let output = []
-    //     if (n === 1) {
-    //         console.log('uno')
-    //         output = [0]
-    //     } else if (n === 2) {
-    //         console.log('dos')
-    //         output = [0,1]
-    //     } else {
-    //         console.log('elsw')
-    //         output = [0,1]
-    
-    //         for (var i = 2; i < n; i++){
-    //             output.push(output[output.length - 2] + output[output.length - 1])
-    //         }
-    //     }
-    
-    //     return output
-    // }
-    
-    // output = fibonacciGenerator()
-    // console.log(output);
+    n = prompt("Ingresa un numero") //** Pedimos un numero */
+
+    let salida = [] //** Arreglo vacio */
+
+    if(n === 1){ //** If donde si sale solo 1 que solo mande el primero numero */
+        salida = [0]
+    } else if (n === 2){ //** Si solo son 2, que solo salgan 2 */
+        salida = [0, 1]
+    } else { //** Si salen los demas, que salgan los demas sin problemas */
+        salida = [0, 1]
+
+        for(i = 2; i < n; i++){ //** Siempre que sea mayor a 2, para que siga subiendo, porque ya lo defini en el if */
+            salida.push (salida[salida.length - 2] + salida[salida.length - 1]) //** push para que ponga numeros y los siguiente que los sume */
+        }
+    }
+
+    return salida //** Retornamos la salida */
+}
+
+salida = fibonacci() //** Que la funcion de salida invoque la funcion definida */
+console.log(salida); //** Mostramos la funcion */
+
+//**_______________________________________________________________________________________________________________________________________________*/
