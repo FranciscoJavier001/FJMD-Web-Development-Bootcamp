@@ -3,6 +3,7 @@
  -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,20 +11,25 @@
     <title>My Website</title>
     <link rel="stylesheet" href="./styles.css">
 </head>
+
 <body>
     <h1>Hello</h1>
+    <a href="https://www.google.com">Google</a>
     <input type="checkbox">
     <button style:active color:red>Click Me</button>
-
     <ul>
         <li class="list">
-            <a href="https://www.google.com">Google</a>
+            <a href="https://www.google.com">Google</a> <!-- document.querySelector("li a").style.color = "red" (Cambio su color a rojo) -->
         </li>
         <li class="list">Second</li>
-        <li class="list">Third</li> <!-- Crear una variable con la ruta, solicito info de la variable, con innerHTML le cambio el nombre -->
+        <li class="list">Third</li>
+        <!-- Crear una variable con la ruta, solicito info de la variable, con innerHTML le cambio el nombre -->
         <!-- let tercero = document.firstElementChild.lastElementChild.children[3].children[2] -->
     </ul>
-
-    <script src="./index.js"></script>
 </body>
+
+<footer>
+    <script src="./index.js"></script>
+</footer>
+
 </html>
