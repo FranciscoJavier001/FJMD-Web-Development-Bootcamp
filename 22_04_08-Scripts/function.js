@@ -316,7 +316,7 @@
 
 //**_______________________________________________________________________________________________________________________________________________*/
 
-function fibonacci(n) { //** Declara+mos una funcion */
+function fibonacci(n) { //** Declaramos una funcion */
 
     n = prompt("Ingresa un numero") //** Pedimos un numero */
 
