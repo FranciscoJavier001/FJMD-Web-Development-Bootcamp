@@ -1,0 +1,1 @@
+<script src="./dicee.html"></script>
