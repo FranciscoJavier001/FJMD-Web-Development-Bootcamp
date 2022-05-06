@@ -7,11 +7,11 @@ num2 = Math.floor(Math.random()*6)+1
 
 //** Mostrar ganador en el h1, utilizamos d.qS(Donde queramos poner el texto) y lo aparecemos con iH y el comentario que queremos poner */
 if (num1 > num2) {
-    document.querySelector("h1").innerHTML = `Jugador #1 Gana`
+    document.querySelector("h1").innerHTML = `🚩Jugador #1 Gana`
 } else if (num1 < num2) {
-    document.querySelector("h1").innerHTML = `Jugador #2 Gana`
+    document.querySelector("h1").innerHTML = `Jugador #2 Gana 🚩`
 } else {
-    document.querySelector("h1").innerHTML = `Empate con ${num1} y ${num2}`
+    document.querySelector("h1").innerHTML = `🎖Empate con ${num1} y ${num2}🎖`
 }
 
 //** Ruta donde se van a guardar las nuevas imagenes */
