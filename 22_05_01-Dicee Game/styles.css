@@ -1,20 +1,19 @@
-.container {
+.container { /* La definimos en la clase */
   width: 70%;
   margin: auto;
   text-align: center;
 }
 
-.dice {
+.dice { /* Igual, definida en la clase */
   text-align: center;
   display: inline-block;
-
 }
 
-body {
+body { /* El fondo que tiene el body */
   background-color: #393E46;
 }
 
-h1 {
+h1 { /* Tamaño del h1 */
   margin: 30px;
   font-family: 'Lobster', cursive;
   text-shadow: 5px 0 #232931;
@@ -22,17 +21,17 @@ h1 {
   color: #4ECCA3;
 }
 
-p {
+p { /* Tamaño de los parrados de texto */
   font-size: 2rem;
   color: #4ECCA3;
   font-family: 'Indie Flower', cursive;
 }
 
-img {
+img { /* El tamaño de las imagenes */
   width: 80%;
 }
 
-footer {
+footer { /* Lo que esta abajo */
   margin-top: 5%;
   color: #EEEEEE;
   text-align: center;
