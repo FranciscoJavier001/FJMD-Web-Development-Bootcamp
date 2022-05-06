@@ -1,34 +1,27 @@
-// //**_______________________________________________________________________________________________________________________________________________*/
+//**_______________________________________________________________________________________________________________________________________________*/
 
-// const num1 = Math.floor(Math.random()*6)+1 //** Tengo un numero aleatorio */
-// console.log(num1); //** Muestro el numero en consola */
-
-// const urlImg1 = `images/dice${num1}.png` //** Ya tengo la Url de la Imagen */
-// console.log(urlImg1); //** Muestro en consola la Url */
-
-// const newImg1 = document.querySelectorAll("img") [0]
-
-// newImg1.setAttribute("src", urlImg1)
-
-// //**_______________________________________________________________________________________________________________________________________________*/
-
-// const num2 = Math.floor(Math.random()*6)+1 //** Tengo un numero aleatorio */
-// console.log(num2); //** Muestro el numero en consola */
-
-// const urlImg2 = `images/dice${num2}.png` //** Ya tengo la Url de la Imagen */
-// console.log(urlImg2); //** Muestro en consola la Url */
-
-// const newImg2 = document.querySelectorAll("img") [1]
-
-// newImg2.setAttribute("src", urlImg2)
-
-// //**_______________________________________________________________________________________________________________________________________________*/
-
-//** 1.- Lo Primero es generar una funcion, para tener los numeros aleatorios */
-//** 2.- Tener un path donde tenga la ruta de los datos */
-//** 3.- Seleccionar con d.qSA la imagen y el lugar  */
-//** 4.- Colocar con sA el lugar donde va el path de la imagen y cual voy a poner */
-
-num1 = Math.floor(Math.random()*6)+1 
-num2 = Math.floor(Math.random()*6)+1 
+//** Funcion para tener 2 variables con 2 numeros aleatorios */
+const num1 = Math.floor(Math.random()*6)+1 
+const num2 = Math.floor(Math.random()*6)+1 
 console.log(num1, num2); //** Ya tengo los 2 numeros aleatorios */
+
+//** Mostrar ganador en el h1 */
+if (num1 > num2) {
+    document.querySelector("h1").innerHTML = `Ganador Jugador 1`
+} else if (num1 < num2) {
+    document.querySelector("h1").innerHTML = `Ganador Jugador 2`
+} else {
+    document.querySelector("h1").innerHTML = `Empate`
+}
+
+//** Ruta donde se van a guardar las nuevas imagenes */
+const num1Url = `images/dice${num1}.png`
+const num2Url = `images/dice${num2}.png`
+
+//** Donde se van a mostrar las nuevas imagenes, seleccionando donde van con el querySelector, el elemento HTML y posicion */
+const newImg1 = document.querySelectorAll("img")[0]
+const newImg2 = document.querySelectorAll("img")[1]
+
+//** Elemento donde se van a mostrar */
+newImg1.setAttribute("src", num1Url)
+newImg2.setAttribute("src", num2Url)
