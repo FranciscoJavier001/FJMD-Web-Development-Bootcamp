@@ -49,7 +49,7 @@ for (var i = 0; i < numberOfDrumButtons; i++) { //** Este iterador, nos dice que
                 kick.play()
                 break
             
-            default: console.log(buttonInnerHTML);
+            default: console.log(buttonInnerHTML); //** Para mostrar en consola el boton clickeado */
         }
     })
 }
