@@ -8,7 +8,7 @@ for (var i = 0; i < numberOfDrumButtons; i++) { //** Iterador, nos dice que que 
     document.querySelectorAll(".drum")[i].addEventListener("click", function () {
         // console.log(this); //** Muestro esto en consola */
 
-        // this.style.color = "white" //** A este elemento solo le pongo el estilo y le cambio el color a blanco */
+        this.style.color = "white" //** A este elemento solo le pongo el estilo y le cambio el color a blanco */
 
         // console.log(this.innerHTML); //** Asi puedo ver en consola que imagen fue la que se toco, pero con el mouse */
         const buttonInnerHTML = this.innerHTML; //** Es una constante, para ver que letra se toco con el mouse, con el this y metodo de browser */
