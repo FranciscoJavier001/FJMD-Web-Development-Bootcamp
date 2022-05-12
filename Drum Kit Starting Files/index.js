@@ -8,13 +8,15 @@ for (var i = 0; i < numberOfDrumButtons; i++) { //** Iterador, nos dice que que 
     document.querySelectorAll(".drum")[i].addEventListener("click", function () {
         // console.log(this); //** Muestro esto en consola */
 
-        this.style.color = "white" //** A este elemento solo le pongo el estilo y le cambio el color a blanco */
+        // this.style.color = "white" //** A este elemento solo le pongo el estilo y le cambio el color a blanco */
 
         // console.log(this.innerHTML); //** Asi puedo ver en consola que imagen fue la que se toco, pero con el mouse */
         const buttonInnerHTML = this.innerHTML; //** Es una constante, para ver que letra se toco con el mouse, con el this y metodo de browser */
 
-        // console.log(buttonInnerHTML); //** Estoy viendo el boton que se presiono */
+        console.log(buttonInnerHTML); //** Estoy viendo el boton que se presiono */
         makeSound(buttonInnerHTML); //** La funcion makeSound recibe el boton que fue presionado */
+
+        buttonAnimation(buttonInnerHTML) //** Invoco la funcion que va a recibir el boton al cual demos click */
     });
 }
 
@@ -25,6 +27,8 @@ document.addEventListener("keypress", function (event) { //** Al precionar una t
     // console.log(event); //** event, recibe entre sus propiedades el key, osea la tecla */
     makeSound(event.key); //** Que haga un sonido cuando se precione una tecla */
     // console.log(event.key); //** Asi veo la tecla presionada */
+
+    buttonAnimation(event.key) //** Funcion que recibe la tecla presionada */
 });
 
 function makeSound(key) { //** Funcion que recibe el key del evento, pero no puedo ponerle event */
@@ -67,4 +71,15 @@ function makeSound(key) { //** Funcion que recibe el key del evento, pero no pue
         default:
             // console.log(buttonInnerHTML); //** Para mostrar en consola el boton clickeado */
     }
+}
+
+function buttonAnimation(currentKey) { //** Creo una nueva funcion, que recibe la tecla presionada, del bA-L31 */
+
+    let activeButton = document.querySelector("." + currentKey) //** Defino variable para ver la clase de la tecla presionada */
+
+    activeButton.classList.add("pressed") //** Cuando presione este boton o tecla cambia de color, clase en CSS */
+
+    setTimeout(function() { //** Obersva donde esta dentro la funcion, aplico el limite de tiempo e invoco esta funcion */
+        activeButton.classList.remove("pressed") //** Le quito la clase a este boton */
+    }, 100) //** Despues de tanto tiempo */
 }
