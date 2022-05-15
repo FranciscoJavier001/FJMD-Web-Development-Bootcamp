@@ -42,7 +42,11 @@
 //     $("h1").css("color", "purple") //** El h1, va a cambiar de color a purpura */
 // })
 
+// $("h1").on("click", function() { //** Seleccionamos el h1, donde cuando dems click en el h1 llame esta funcion */
+//     $("h1").css("color", "purple") //** El h1, va a cambiar de color a purpura */
+// })
 
-$("h1").on("click", function() { //** Seleccionamos el h1, donde cuando dems click en el h1 llame esta funcion */
-    $("h1").css("color", "purple") //** El h1, va a cambiar de color a purpura */
-})
+// $("h1").before("<button>New</button>") //** Asi creo un boton antes del h1 */
+// $("h1").after("<button>New</button>") //** Asi creo un boton despues del h1 */
+// $("h1").prepend("<button>New</button>") //** Asi creo un boton antes del h1, en la misma fila */
+// $("h1").append("<button>New</button>") //** Asi creo un boton despues del h1 en la misma fila */
