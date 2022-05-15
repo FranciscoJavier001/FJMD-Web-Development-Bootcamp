@@ -50,3 +50,50 @@
 // $("h1").after("<button>New</button>") //** Asi creo un boton despues del h1 */
 // $("h1").prepend("<button>New</button>") //** Asi creo un boton antes del h1, en la misma fila */
 // $("h1").append("<button>New</button>") //** Asi creo un boton despues del h1 en la misma fila */
+
+// $("button").on("click", function() { //** Al hacer click en un boton */
+//     $("h1").hide() //** El h1 desaparece */
+// })
+
+// $("h1").show() //** Asi lo vuelvo a aparecer */
+
+// $("button").on("click", function() { //** Al hacer click en un boton */
+//     $("h1").toggle() //** El h1 desaparece o aparece */
+// })
+
+// $("button").on("click", function() { //** Al hacer click en un boton */
+//     $("h1").fadeOut() //** El h1 desaparece pero con efecto */
+// })
+
+// $("button").on("click", function() { //** Al hacer click en un boton */
+//     $("h1").fadeIn() //** El h1 aparece pero con efecto */
+// })
+
+// $("button").on("click", function() { //** Al hacer click en un boton */
+//     $("h1").fadeToggle() //** El h1 desaparece o aparece */
+// })
+
+// $("button").on("click", function() { //** Al hacer click en un boton */
+//     $("h1").slideUp() //** El h1 desaparece hacia arriba */
+// })
+
+// $("button").on("click", function() { //** Al hacer click en un boton */
+//     $("h1").slideDown() //** El h1 aparece hacia abajo */
+// })
+
+// $("button").on("click", function() { //** Al hacer click en un boton */
+//     $("h1").slideToggle() //** El h1 desaparece o aparece hacia arriba y abajo */
+// })
+
+// $("button").on("click", function() { //** Al hacer click en un boton */
+//     $("h1").animate({opacity: 0.5}) //** El h1 se hace un poco mas transparente, recuerda ponerlo entre curly brackers */
+// })
+
+// $("button").on("click", function() { //** Al hacer click en un boton */
+//     $("h1").animate({margin: 20}) //** El h1 debo ponerlo entre curly brackers y aqui la animacion cambia el margen del elemento */
+// })
+
+$("button").on("click", function() { //** Al hacer click en un boton */
+    //** H1, primero se va para arriba, luego se va para abajo, luego se hace mas transparente, todo animado */
+    $("h1").slideUp().slideDown().animate({opacity: 0.5}) 
+})
