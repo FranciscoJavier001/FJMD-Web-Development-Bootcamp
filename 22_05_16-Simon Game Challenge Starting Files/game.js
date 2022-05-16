@@ -49,6 +49,8 @@ function checkAnswer(currentLevel) { //** Funcion que recibe el nivel actual */
         }, 200) //** Despues de este tiempo, removemos la clase cuando fallan */
 
         $("#level-title").text("Perdiste =( Presiona una tecla para reintentar") //** Comentario cuando pierdes */
+
+        startOver() //** Mandamos llamar la funcion */
     }
 }
 
@@ -83,4 +85,11 @@ function animatePress(currentColor) { //** Funcion que recibe un parametro */
     setTimeout(function() { //** Le asiganos un tiempo para esta funcion */
         $("#" + currentColor).removeClass("pressed")  //** Al id de la clase, le voy a remover la clase que le añadi, pero despues de un tiempo */
     }, 100) //** Le asigne 100 ms de tiempo para remover la clase */
+}
+
+function startOver() { //** Funcion anonima que contiene estos parametros */
+
+    level = 0; //** Nivel en 0 */
+    gamePattern = [] //** Reinicializamos el arreglo del juego */
+    started = false //** Se pone en false, hasta que presione tecla se vuelve a true */
 }
