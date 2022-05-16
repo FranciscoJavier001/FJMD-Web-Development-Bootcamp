@@ -8,10 +8,11 @@ let started = false //** Una variable booleana declarada en false */
 let level = 0 //** Asignacion del nivel del juego */
 
 $(document).keypress(function() { //** Si en el documento se preciona una tecla se lanza esta funcion anonima */
-    if (!started) //** Si started es diferente a false */
-    $("#level-title").text("Nivel" + level) //** Vamos actualizando el texto del nivel, con el nivel actual */
-    nextSequence() //** Se inicializa de nuevo esta funcion */
-    started = true //** Volvemos a inicializar el juego cambiando el booleano */
+    if (!started) { //** Si started es diferente a false */
+        $("#level-title").text("Nivel" + level) //** Vamos actualizando el texto del nivel, con el nivel actual */
+        nextSequence() //** Se inicializa de nuevo esta funcion */
+        started = true //** Volvemos a inicializar el juego cambiando el booleano */
+    }
 })
 
 $(".btn").click(function() { //** Con jQuery, al darle click a cualquier clase btn disparamos esta funcion anonima */
@@ -21,9 +22,31 @@ $(".btn").click(function() { //** Con jQuery, al darle click a cualquier clase b
 
     playSound(userChosenColour) //** Va a hacer el sonido del color que sea presionado */
     animatePress(userChosenColour) //** Animamos el icono presionado */
+
+    checkAnswer(userClickedPattern.length -1) //** Esta funcion va agregando las teclas que han sido presionadas */
 })
 
+function checkAnswer(currentLevel) { //** Funcion que recibe el nivel actual */
+
+    if (gamePattern[currentLevel] === userClickedPattern[currentLevel]) { //** Si el parametro de ambos es igual entonces continua */
+
+        console.log("Logrado"); //** Si va poniendo bien las cosas mostramos esto en consola */
+
+        if (userClickedPattern.length === gamePattern.length) { //** Si los arreglos van correctos ambos entonces */
+
+            setTimeout(function() { //** Despues de un tiempo voy a lanzar esta funcion anonima */
+                nextSequence() //** Se lanza esta funcion */
+            }, 1000) //** Despues de 1000 ms se agrega nuevo color */
+        }
+    } else {
+        console.log("mamaste");
+    }
+}
+
 function nextSequence() { //** Creo una funcion, pero va a tener cosas dentro */
+    
+    userClickedPattern = [] //** Si esta mal, vamos a reiniciar la secuencia */
+
     level++ //** Cada secuencia va iniciando el nivel y si lo logra va aumentado 1 */
 
     $("#level-title").text("Nive" + level)
