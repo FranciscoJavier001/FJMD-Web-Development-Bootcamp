@@ -29,3 +29,12 @@ function playSound(name) { //** Funcion que recibe el nombre del sonido */
     let audio = new Audio(`sounds/${name}.mp3`) //** Asi le ponemos audio a cada color */
     audio.play() //** Asi reproducimos el audio */
 }
+
+function animatePress(currentColor) { //** Funcion que recibe un parametro */
+
+    $("#" + currentColor).addClass("pressed") //** Al id del color seleccionado le agregamos la clase presionado */
+
+    setTimeout(function() { //** Le asiganos un tiempo para esta funcion */
+        $("#" + currentColor).removeClass("pressed")  //** Al id de la clase, le voy a remover la clase que le añadi, pero despues de un tiempo */
+    }, 100) //** Le asigne 100 ms de tiempo para remover la clase */
+}
