@@ -40,11 +40,20 @@ function checkAnswer(currentLevel) { //** Funcion que recibe el nivel actual */
         }
     } else {
         console.log("mamaste");
+
+        playSound("wrong") //** Si fallan entonces reproduzco este sonido */
+
+        $("body").addClass("game-over") //** Agrega al body la clase game-over */
+        setTimeout(function() { //** Despues de unos segundos vamos a inicializar esta funcion anonima */
+            $("body").removeClass("game-over") //** Del body, vamos a remover la clase que agregamos */
+        }, 200) //** Despues de este tiempo, removemos la clase cuando fallan */
+
+        $("#level-title").text("Perdiste =( Presiona una tecla para reintentar") //** Comentario cuando pierdes */
     }
 }
 
 function nextSequence() { //** Creo una funcion, pero va a tener cosas dentro */
-    
+
     userClickedPattern = [] //** Si esta mal, vamos a reiniciar la secuencia */
 
     level++ //** Cada secuencia va iniciando el nivel y si lo logra va aumentado 1 */
