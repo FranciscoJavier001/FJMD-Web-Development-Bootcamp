@@ -1,5 +1,5 @@
 //**_______________________________________________________________________________________________________________________________________________*/
-const buttonColors = ["red", "blue", "green", "yellow"] //** Creo la variable */
+const buttonColors = ["green", "red", "yellow", "blue"] //** Creo la variable */
 
 let gamePattern = [] //** Creo un array vacio */
 let userClickedPattern = [] //** Arreglo vacio, donde se van a guardar las teclas que ingreso el usuario */
@@ -37,7 +37,7 @@ function checkAnswer(currentLevel) { //** Funcion que recibe el nivel actual */
             setTimeout(function() { //** Despues de un tiempo voy a lanzar esta funcion anonima */
                 nextSequence() //** Se lanza esta funcion */
             }, 1000) //** Despues de 1000 ms se agrega nuevo color */
-        }
+        } 
     } else {
         console.log("mamaste");
 
@@ -60,16 +60,17 @@ function nextSequence() { //** Creo una funcion, pero va a tener cosas dentro */
 
     level++ //** Cada secuencia va iniciando el nivel y si lo logra va aumentado 1 */
 
-    $("#level-title").text("Nive" + level)
+    $("#level-title").text("Nive " + level)
     
-    let randomNumber = Math.floor(Math.random()*4) + 1 //** Funcion que da un numero del 1 al 4 */
-    // console.log(randomNumber); //** Muestro el numero en consola */
+    let randomNumber = Math.floor(Math.random()*4) //** Funcion que da un numero del 1 al 4 */
+    console.log(randomNumber); //** Muestro el numero en consola */
     let randomChosenColour = buttonColors[randomNumber] //** Variable de color elegido, fuera van los colores y adentro el numero seleccionado */
     gamePattern.push(randomChosenColour) //** Asi creo un push, donde se van a ir agregando colores(numeros) al arreglo */
     
     $("#" + randomChosenColour).fadeIn(100).fadeOut(100).fadeIn(100) //** Les doy animacion a cada color */
     
     playSound(randomChosenColour) //** Reproduzco el sonido, del numero del boton presionado */
+    console.log(gamePattern);
 }
 
 function playSound(name) { //** Funcion que recibe el nombre del sonido */
