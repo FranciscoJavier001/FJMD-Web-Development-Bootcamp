@@ -4,15 +4,29 @@ const buttonColors = ["red", "blue", "green", "yellow"] //** Creo la variable */
 let gamePattern = [] //** Creo un array vacio */
 let userClickedPattern = [] //** Arreglo vacio, donde se van a guardar las teclas que ingreso el usuario */
 
+let started = false //** Una variable booleana declarada en false */
+let level = 0 //** Asignacion del nivel del juego */
+
+$(document).keypress(function() { //** Si en el documento se preciona una tecla se lanza esta funcion anonima */
+    if (!started) //** Si started es diferente a false */
+    $("#level-title").text("Nivel" + level) //** Vamos actualizando el texto del nivel, con el nivel actual */
+    nextSequence() //** Se inicializa de nuevo esta funcion */
+    started = true //** Volvemos a inicializar el juego cambiando el booleano */
+})
+
 $(".btn").click(function() { //** Con jQuery, al darle click a cualquier clase btn disparamos esta funcion anonima */
     let userChosenColour = $(this).attr("id") //** Asi conseguimos informacion del elemento que fue clickeado, su id(color) */
     userClickedPattern.push(userChosenColour) //** Este array, va a estar recibiendo los id de userChosenColour */
     // console.log(userClickedPattern); //** Asi vemos el nuevo array de elementos en consola */
 
     playSound(userChosenColour) //** Va a hacer el sonido del color que sea presionado */
+    animatePress(userChosenColour) //** Animamos el icono presionado */
 })
 
 function nextSequence() { //** Creo una funcion, pero va a tener cosas dentro */
+    level++ //** Cada secuencia va iniciando el nivel y si lo logra va aumentado 1 */
+
+    $("#level-title").text("Nive" + level)
     
     let randomNumber = Math.floor(Math.random()*4) + 1 //** Funcion que da un numero del 1 al 4 */
     // console.log(randomNumber); //** Muestro el numero en consola */
