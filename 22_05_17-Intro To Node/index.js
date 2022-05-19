@@ -7,6 +7,7 @@
 
 //** En la terminal con npm init, asi inicializamos el proceso del package.json */
 
+//**_______________________________________________________________________________________________________________________________________________*/
 let superheroes = require("superheroes"); //** Asi puedo mandar llamar a una dependencia */
 let supervillains = require("supervillains") //** El primero solo es el nombre de donde va a venir, igual */
 
