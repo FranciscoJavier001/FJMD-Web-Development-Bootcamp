@@ -27,6 +27,19 @@ app.post("/", function(req, res) { //** Cuando se haga el metodo post, definido 
     res.send("The result of the calculator is " + result) //** Se va a recibir esta respuesta en el navegador */
 })
 
+app.get("/bmicalculator", function(req, res) { //** Lo priero es poner el nombre en minuscula, del path */
+    res.sendFile(__dirname + "/bmicalCulator.html") //** Recuerda, solo va como string el link del archivo */
+})
+
+app.post("/bmicalculator", function(req, res) { //** Metodo porst, porque asi lo definimos, y las funciones que recibe */
+    let weight = parseFloat(req.body.weight) //** La vamos a tener con entero y decimal, y de donde viene, req es porque es requerida */
+    let height = parseFloat(req.body.height)
+
+    let bmi = weight / (height * height)
+
+    res.send("Yout BMI is " + bmi) //** Es la respuesta que se va a mostrar en la pagina */
+})
+
 app.listen(3000, function() {
     console.log("Running on port 3000");
 })
