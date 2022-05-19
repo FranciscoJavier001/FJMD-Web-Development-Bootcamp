@@ -15,7 +15,6 @@ app.get("/", function(req, res) {
     res.sendFile(__dirname + "/index.html") //** Asi puedo redireccionar la ruta en express */
 })
 
-
 app.post("/", function(req, res) { //** Cuando se haga el metodo post, definido en el index */
 
     // console.log(req.body.num1) //** Asi mostramos la info del body-parser en consola */
