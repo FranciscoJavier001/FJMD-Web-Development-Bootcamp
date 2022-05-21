@@ -1,0 +1,32 @@
+/*
+//**_______________________________________________________________________________________________________________________________________________*/
+/* *{
+    margin: 0px
+} */
+
+#cuadro1 {
+    width: 800px;
+    height: 800px;
+    background-color: burlywood;
+    position: absolute;
+}
+
+#cuadro2 {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background-color: green;
+    margin: 200px;
+    position: absolute;
+
+}
+
+#cuadro3{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    margin: 100px;
+}
+
+
