@@ -1,0 +1,14 @@
+{
+  "name": "22_05_21-weather-proyect",
+  "version": "1.0.0",
+  "description": "WeatherApp",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Francisco Javier Martinez Duran",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
