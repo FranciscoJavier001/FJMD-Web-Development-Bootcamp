@@ -28,6 +28,7 @@ app.get("/", function(req, res) { //** app.get en el root del path, va a recibir
             const iconUrl = (`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`) //** Creamos una variable del URL */
             res.write(`<img src="${iconUrl}">`) //** Asi mostramos la variable */
             res.send()
+            
             // const object = { //** Creamos una variable que va a ser un objeto */
             //     name: "Francisco", //** Estas son sus propiedades */
             //     favouriteFood: "Chilli"
