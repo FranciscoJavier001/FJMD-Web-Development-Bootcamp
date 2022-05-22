@@ -16,12 +16,18 @@ app.get("/", function(req, res) { //** app.get en el root del path, va a recibir
         response.on("data", function(data) { //** On me manda info de la conexion, defino la data, luego recibe la data y abajo la muestro */
             // console.log(data); //** Me manda un codigo bytes y se tranforma a text, me muestra info del json */
             const weatherData = JSON.parse(data) //** Creo una variable, que es igual a un JSON parse(cambio a JSON), que muestre la data */
-            // console.log(weatherData); //** Muestro en consola la data, pero se muestra como un JSON */
+            console.log(weatherData); //** Muestro en consola la data, pero se muestra como un JSON */
             // const temp = weatherData.main.temp //** Asi puedo conseguir info mas refinada, definiendo lo que quiero */
             // console.log(temp); //** Muestro en consola la teperatura */
-            const weatherDescription = weatherData.weather[0].description //** Ingreso al navegador a ver el json y copio el path con "ext-JSON" */
-            console.log(weatherDescription); //** Lo mostre en consola */
-
+            // const weatherDescription = weatherData.weather[0].description //** Ingreso navegador a ver el json y copio el path con "ext-JSON" */
+            // console.log(weatherDescription); //** Lo mostre en consola */
+            // console.log(weatherData.name); //** Para ponerlo bonito abajo */
+            //** Asi lo mostramos, solo un send, puedo pasarle etiquetas html, pero lo brinco con el write */
+            res.write(`<h1>The temperature in ${weatherData.name} is ${weatherData.main.temp} degress Celcius</h1>`) 
+            res.write(`<p>The Weather is currently ${weatherData.weather[0].description}</p>`) 
+            const iconUrl = (`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`) //** Creamos una variable del URL */
+            res.write(`<img src="${iconUrl}">`) //** Asi mostramos la variable */
+            res.send()
             // const object = { //** Creamos una variable que va a ser un objeto */
             //     name: "Francisco", //** Estas son sus propiedades */
             //     favouriteFood: "Chilli"
@@ -30,8 +36,7 @@ app.get("/", function(req, res) { //** app.get en el root del path, va a recibir
         })
     }) 
 
-
-    res.send("Server is up and running") //** res(respuesta).send(que manda) va a mostrar en el DOM el mensaje entre comillas */
+    // res.send("Server is up and running") //** res(respuesta).send(que manda) va a mostrar en el DOM el mensaje entre comillas */
 })
 
 //** nodemon app.js (para mostrar los cambios en el navegador sin recargar) */
