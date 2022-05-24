@@ -1,7 +1,7 @@
 //**_______________________________________________________________________________________________________________________________________________*/
 const express = require("express") //** Para traer express del package.json */
 const https = require("https") //** Vamos a utilizar metodos https, asi que tengo que definirlo para que sea requerido */
-const bodyParser = require("body-parser")
+const bodyParser = require("body-parser") //** Para recibir info desde el html npm i body-parser */
 
 const app = express() //** La variable app es una funcion de express */
 
@@ -12,7 +12,7 @@ app.get("/", function(req, res) { //** app.get en el root del path, va a recibir
     res.sendFile(__dirname + "/index.html") //** La respuesta de envia desde direccion URL(__dirname) y el path de donde recibo */
 })
 
-app.post("/", function(req, res) { //** Vamos a hacer una peticion, que me trae unos req y una respuesta, que son estas */
+app.post("/", function(req, res) { //** Vamos a hacer una peticion, que me trae unos req y una respuesta, que son estas, post y / del html */
     // console.log(req.body.cityName)
     // console.log("Post request recived");
 
@@ -30,7 +30,7 @@ https.get(url, function(response) { //** El metodo que va a tener el https, que 
     response.on("data", function(data) { //** On me manda info de la conexion, defino la data, luego recibe la data y abajo la muestro */
         // console.log(data); //** Me manda un codigo bytes y se tranforma a text, me muestra info del json */
         const weatherData = JSON.parse(data) //** Creo una variable, que es igual a un JSON parse(cambio a JSON), que muestre la data */
-        console.log(weatherData); //** Muestro en consola la data, pero se muestra como un JSON */
+        // console.log(weatherData); //** Muestro en consola la data, pero se muestra como un JSON */
         // const temp = weatherData.main.temp //** Asi puedo conseguir info mas refinada, definiendo lo que quiero */
         // console.log(temp); //** Muestro en consola la teperatura */
         // const weatherDescription = weatherData.weather[0].description //** Ingreso navegador a ver el json y copio el path con "ext-JSON" */
