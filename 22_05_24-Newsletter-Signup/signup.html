@@ -1,0 +1,35 @@
+<!--
+//**_______________________________________________________________________________________________________________________________________________*/
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="text-center"> <!-- Centramos el texto -->
+    <form class="form-signin">
+        <img class="mt-5 mb-4" src="./images/user.png" alt="" width="72" height="72"> <!-- Margenes, Img, Tamaños -->
+        <h1 class="h3 mb-3 font-weight-normal">Inicia Sesion</h1> <!-- Tamaño Texto, Margen, Tamaño de letra -->
+        <label form="inputEmail" class="sr-only">Correo Electronico</label> <!-- Etiqueta -->
+        <!-- Formulario, observa id -->
+        <input type="email" id="inputEmail" class="form-control" placeholder="Correo Electronico" required autofocus> 
+        <label for="inputPassword" class="sr-only">Password</label> <!-- Etiqueta -->
+        <!-- Formulario, observa id -->
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <div class="checkbox mb-3"> <!-- Checkbox, estilos -->
+          <label>
+            <input type="checkbox" value="remember-me"> Recuerdame <!-- Ver type -->
+          </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign In</button>
+        <p class="mt-5 mb-3 text-muted">&copy;2022 - Francisco Javier Martinez Duran</p>
+    </form>
+</body>
+</html>
