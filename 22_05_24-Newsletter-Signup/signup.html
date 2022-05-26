@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="text-center"> <!-- Centramos el texto -->
-    <form class="form-signin">
+<body class="text-center"> <!-- Centramos todoslos elementos -->
+    <form class="form-signin"> <!-- La clase solo es una clase definida -->
         <img class="mt-5 mb-4" src="./images/user.png" alt="" width="72" height="72"> <!-- Margenes, Img, Tamaños -->
         <h1 class="h3 mb-3 font-weight-normal">Inicia Sesion</h1> <!-- Tamaño Texto, Margen, Tamaño de letra -->
         <label form="inputEmail" class="sr-only">Correo Electronico</label> <!-- Etiqueta -->
@@ -23,13 +23,13 @@
         <label for="inputPassword" class="sr-only">Password</label> <!-- Etiqueta -->
         <!-- Formulario, observa id -->
         <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-        <div class="checkbox mb-3"> <!-- Checkbox, estilos -->
+        <div class="checkbox mb-3 mt-2"> <!-- Checkbox, estilos -->
           <label>
             <input type="checkbox" value="remember-me"> Recuerdame <!-- Ver type -->
           </label>
         </div>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign In</button>
-        <p class="mt-5 mb-3 text-muted">&copy;2022 - Francisco Javier Martinez Duran</p>
+        <p class="mt-5 mb-3 text-muted">&copy;2022 <br/> Francisco Javier Martinez Duran</p>
     </form>
 </body>
 </html>

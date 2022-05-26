@@ -1,22 +1,31 @@
-html, body{
-    height: 100%;
-}
-
 body {
-    /* display: -ms-flexbox; */
-    display: flex;
-    /* -ms-flex-align: center; */
-    /* align-items: center; */
-    /* padding-top: 40px; */
-    /* padding-bottom: 40px; */
-    /* background-color: #f5f5f5; */
-  }
-
-.form-signin{
-    /* margin-top: 10%; */
+    display: flex; /* Asi toma el espacio, para que no abarque todo */ 
+    padding-top: 40px; /* Bajamos el espacio de arriba hacia abajo */
+    padding-bottom: 40px; /* Bajamos el espacio de arriba hacia abajo */
+    background-color: #F5F5F5;
 }
 
-.form-control {
-    /* width: 50%; */
-    /* align-items: center; */
+.form-signin {
+    width: 100%; /* Para que ocupe todo el ancho */
+    max-width: 330px; /* Pero el 100% aqui se o reducimos*/
+    padding: 15px; /* Bajamos un poco mas todo lo que hay en el form */
+    margin: auto; /* Asi puedo ponerlo en medio */
+}
+
+.form-signin .form-control {
+    /* position: relative; Posicion relativa al HTML */
+    height: auto;
+    padding: .5rem; /* Tamaño de la caja de texto */
+}
+
+.form-signin .form-control:focus {
+    z-index: 2; /* Que se muestren hasta el frente*/
+}
+
+.sr-only {
+    padding: .5rem;
+}
+
+.btn {
+    margin-top: 10px; /* Bajo un poco mas el boton */
 }
