@@ -7,29 +7,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign In</title>
+    <title>Newsletter Sign Un</title>
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" 
-    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"> <!-- Bootstrap -->
+
+    <link rel="stylesheet" href="css/style.css"> <!-- Link a CSS -->
 </head>
 
 <body class="text-center"> <!-- Centramos todoslos elementos -->
-    <form class="form-signin"> <!-- La clase solo es una clase definida -->
+    <form action="/" method="POST" class="form-signin"> <!-- De donde van las acciones, que metodo y la clase definida en css -->
         <img class="mt-5 mb-4" src="./images/user.png" alt="" width="72" height="72"> <!-- Margenes, Img, Tamaños -->
-        <h1 class="h3 mb-3 font-weight-normal">Inicia Sesion</h1> <!-- Tamaño Texto, Margen, Tamaño de letra -->
-        <label form="inputEmail" class="sr-only">Correo Electronico</label> <!-- Etiqueta -->
-        <!-- Formulario, observa id -->
-        <input type="email" id="inputEmail" class="form-control" placeholder="Correo Electronico" required autofocus> 
-        <label for="inputPassword" class="sr-only">Password</label> <!-- Etiqueta -->
-        <!-- Formulario, observa id -->
-        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-        <div class="checkbox mb-3 mt-2"> <!-- Checkbox, estilos -->
-          <label>
-            <input type="checkbox" value="remember-me"> Recuerdame <!-- Ver type -->
-          </label>
-        </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign In</button>
-        <p class="mt-5 mb-3 text-muted">&copy;2022 <br/> Francisco Javier Martinez Duran</p>
+        <h1 class="h3 mb-3 font-weight-normal">Suscribete a mi Boletin!</h1> <!-- Tamaño Texto, Margen, Tamaño de letra -->
+        
+        <!-- Formulario, los name me sirven para identidficarlos en el app.js -->
+        <input type="text" name="fName" class="form-control top" placeholder="Nombre" required autofocus>
+        <input type="text" name="lName" class="form-control middle" placeholder="Apellido" required autofocus>
+        <input type="email" name="email" class="form-control bottom" placeholder="Correo Electronico" required autofocus>
+
+        <button class="btn btn-lg btn-primary col-12" type="submit">Suscribete</button> <!-- Dejo el boton de todo el ancho -->
+        <p class="mt-2 text-muted">&copy;2022 <br/> Francisco Javier Martinez Duran</p> <!-- MargenTop, Texto en Gris, Espacio entre elementos -->
     </form>
 </body>
 </html>

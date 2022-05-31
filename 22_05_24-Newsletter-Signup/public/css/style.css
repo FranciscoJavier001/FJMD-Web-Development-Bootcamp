@@ -16,14 +16,7 @@ body {
     /* position: relative; Posicion relativa al HTML */
     height: auto;
     padding: .5rem; /* Tamaño de la caja de texto */
-}
-
-.form-signin .form-control:focus {
-    z-index: 2; /* Que se muestren hasta el frente*/
-}
-
-.sr-only {
-    padding: .5rem;
+    margin-top: .3rem;
 }
 
 .btn {
