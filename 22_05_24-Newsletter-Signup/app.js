@@ -48,13 +48,26 @@ app.post("/", function (req, res) {
 
     //** Nueva variable que recibe el pedido del https recibe una url, unas opciones y una funcion esperando el resp */
     const request = https.request(url, options, function(response) { 
+
+        if (response.statusCode === 200) { //** Vamos a revisar el status de la pagina */
+            // res.send("Suscrito exitosamente"); //** Si esta bien, mostramos esto en pantalla */
+            res.sendFile(__dirname + "/success.html"); //** Si esta bien, mostramos esto en pantalla */
+        } else { //** Sino  */
+            // res.send("Hubo un error"); //** Mostramos el error en pantalla */
+            res.sendFile(__dirname + "/failure.html"); //** Mostramos el error en pantalla */
+        }
+
         response.on("data", function(data) { //** La respuesta del pedido, va a recibir una funcion, y va a recibir una data */
             console.log(JSON.parse(data)); //** Imprimo la data en formato JSON */
     })
 })
 
-request.write(jsonData); //** La data va a ser enviada a la funcion request */
+// request.write(jsonData); //** La data va a ser enviada a la funcion request */s
 request.end() //** Asi la finalizamos*/
+})
+
+app.post("/failure", function (req, res) { //** app.post en el root del path, va a recibir de una funcion un req y una res(respuesta) */
+    res.redirect("/"); //** Redireccionamos al root */
 })
 
 app.listen(3000, function () { //** Para escuchar las peticiones en el puerto 3000, que se ejecute la funcion anonima y que haga lo siguiente */
