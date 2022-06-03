@@ -70,6 +70,6 @@ app.post("/failure", function (req, res) { //** app.post en el root del path, va
     res.redirect("/"); //** Redireccionamos al root */
 })
 
-app.listen(3000, function () { //** Para escuchar las peticiones en el puerto 3000, que se ejecute la funcion anonima y que haga lo siguiente */
+app.listen(process.env.PORT || 3000, function() { //** Va a correr en el puerto de process.env.PORT o en el 3000 */
     console.log(`Server is running on port 3000`); //** Para mostrarlo en consola */
 })
