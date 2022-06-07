@@ -1,15 +1,15 @@
-const express = require('express')
+//**______________________________________________________________________________________________________________________________________________________________*/
+const express = require('express') //npm i express
 const date = require(__dirname + '/data.js')
-const app = express()
-
+const app = express() //** npm install express */
 
 let items = ['buy food', 'cook food', 'eat food']
 let workItems = []
 app.use(express.urlencoded({extended: true}))
-app.use(express.static("public"))
-app.set('view engine', 'ejs')
+app.use(express.static("public")) //** Para poder tener acceso a la carpeta publica */
+app.set('view engine', 'ejs') //** npm i ejs */
 
-app.get('/', (req, res) => {
+app.get('/', (req, res) => { //** Para poder acceder al main */
     let day = date.getDate()
     res.render('list', {listTitle: day, newItemsList: items})
 })
@@ -35,6 +35,6 @@ app.get('/about', (req, res) => {
     res.render("about");
 })
 
-app.listen(3000, () => {
+app.listen(3000, () => { //** Puerto en el cual esta corriendo en el localhost */
     console.log('Server has started on port 3000')
 })
