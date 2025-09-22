@@ -30,20 +30,19 @@
 // document.getElementById('output').innerText.join(' ')
 
 
+// function twoParameter(a,b){
+//     let sub1 = 0
+//     let sub2 = 0
 
-function twoParameter(a,b){
-    let sub1 = 0
-    let sub2 = 0
+//     for (let i=0; i<3; i++){
+//         if(a[i] > b[i]) sub1++
+//         else if (a[i] < b[i]) sub2++ 
+//     }
+//     return [sub1, sub2]
+// }
 
-    for (let i=0; i<3; i++){
-        if(a[i] > b[i]) sub1++
-        else if (a[i] < b[i]) sub2++ 
-    }
-    return [sub1, sub2]
-}
-
-const main = twoParameter([5,6,7], [5,6,10])
-document.getElementById('output').innerText = main.join('')
+// const main = twoParameter([5,6,7], [5,6,10])
+// document.getElementById('output').innerText = main.join('')
 
 
 // function compareTriplets(a, b) { /* Creamos una funcion que reciba 2 parametros */
@@ -62,3 +61,17 @@ document.getElementById('output').innerText = main.join('')
 // const result = compareTriplets([5, 6, 7], [3, 6, 10]); 
 // document.getElementById('output').innerText = result.join(' ');
 
+/* Codigo a mi manera, debo de haerlo sin ver el codigo para mejorar mi logica */
+const compareTriplets = (a,b) => { 
+    let alice = 0;
+    let bob = 0
+
+    for (let i = 0; i < 3; i++){
+        if(a[i] > b[i]) alice++
+        else if(a[i] < b[i]) bob++
+    }
+    return [alice, bob]
+}
+
+const result = compareTriplets([1,2,3], [2,3,4])
+document.getElementById('output').innerText = result.join(' ')
