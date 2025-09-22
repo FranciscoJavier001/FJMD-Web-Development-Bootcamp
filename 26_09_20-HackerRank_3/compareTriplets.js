@@ -15,3 +15,15 @@ const result = compareTriplets([5, 6, 7], [3, 6, 10]);
 document.getElementById('output').innerText = result.join(' ');
 
 
+/* Crear funcion que reciba 2 parametros */
+/* Inicializar las variables modificables en 0 */
+
+/* Iterar con el ciclo for un contador que sea de 3 */
+/* Crear un if donde se sume puntos a una variable anteriormente definida */
+/* Misma accion pero con el otro parametro recibido */
+
+/* Que voy a retornar */
+
+/* Ejemplo */
+/* Definimos un funcion que inicialice una funcion y le pasamos los parametros de ambos objetos */
+/* Documento consigue un elemento pot id, por el id inserta el texto, variable definida junta con comillas */
