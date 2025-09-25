@@ -62,16 +62,31 @@
 // document.getElementById('output').innerText = result.join(' ');
 
 /* Codigo a mi manera, debo de haerlo sin ver el codigo para mejorar mi logica */
-const compareTriplets = (a,b) => { 
-    let alice = 0;
-    let bob = 0
+// const compareTriplets = (a,b) => { /* Funcion Fecha conde recibas 2 parametros */
+//     let alice = 0; /* Inicializa 2 variables en 0 que puedan cambiar */
+//     let bob = 0
 
-    for (let i = 0; i < 3; i++){
-        if(a[i] > b[i]) alice++
-        else if(a[i] < b[i]) bob++
-    }
-    return [alice, bob]
-}
+//     for (let i = 0; i < 3; i++){ /* Iteracion para cada index que son 3 */
+//         if(a[i] > b[i]) alice++ /* Si el argumento es mayor que el argumento 2, agregale un punto a la variable definida en 0 */
+//         else if(a[i] < b[i]) bob++ /* Pero si es lo contrario solo dale puntos a la otra variable definida en 0 */
+//     }
+//     return [alice, bob] /* Regresa las variables que le diste puntos */
+// }
 
-const result = compareTriplets([1,2,3], [2,3,4])
+// const result = compareTriplets([1,2,3], [2,3,4]) /* Crea una variable que reciba 3 indices de las 2 argumentos recibidos */
+// document.getElementById('output').innerText = result.join(' ')
+
+
+/* Funcion Fecha conde recibas 2 parametros */
+/* Inicializa 2 variables en 0 que puedan cambiar */
+
+
+/* Iteracion para cada index que son 3 */
+/* Si el argumento es mayor que el argumento 2, agregale un punto a la variable definida en 0 */
+/* Pero si es lo contrario solo dale puntos a la otra variable definida en 0 */
+
+/* Regresa las variables que le diste puntos */
+
+
+ /* Crea una variable que reciba 3 indices de las 2 argumentos recibidos */
 document.getElementById('output').innerText = result.join(' ')
