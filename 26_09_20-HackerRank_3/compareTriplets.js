@@ -77,6 +77,33 @@
 // document.getElementById('output').innerText = result.join(' ')
 
 
+
+
+// const compararResultados = (a,b) => {
+//     let alice = 0
+//     let bob = 0
+
+//     for(i=0; i < 3; i++){
+//         if(a[i] > b[i])alice++
+//         else if(a[i]<b[i])bob++
+//     }
+//     return alice, bob
+// }
+
+// const result = compararResultados([1,2,3], [2,3,4])
+// document.getElementById('output').innerText = result.join(' ')
+
+// Me falto en el ejercicio definir let en i y poner el return entre corchetes
+
+
+
+
+
+
+
+
+
+
 /* Funcion Fecha conde recibas 2 parametros */
 /* Inicializa 2 variables en 0 que puedan cambiar */
 
@@ -88,5 +115,16 @@
 /* Regresa las variables que le diste puntos */
 
 
- /* Crea una variable que reciba 3 indices de las 2 argumentos recibidos */
-document.getElementById('output').innerText = result.join(' ')
+const compararResultados = (a, b) => {
+    let alice = 0
+    let bob = 0
+
+    for(let i=0; i<3; i++){
+        if(a[i] > b[i]) alice++
+        else if(a[i] < b[i]) bob++
+    }
+    return [alice, bob]
+}
+
+ const result = compararResultados([7,7,3], [2,3,4])/* Crea una variable que reciba 3 indices de las 2 argumentos recibidos */
+ document.getElementById('output').innerText = result.join(' ')
