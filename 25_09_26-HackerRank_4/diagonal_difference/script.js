@@ -1,20 +1,20 @@
 'use strict';
 
-// Calcula la diferencia absoluta entre las diagonales principales de una matriz cuadrada.
-// arr es una matriz 2D con enteros.
-function diagonalDifference(arr) {
-  const n = arr.length;
-  let sumPrimary = 0;
-  let sumSecondary = 0;
 
-  for (let i = 0; i < n; i++) {
+
+function diagonalDifference(arr) { /* Defino funcion que recibe un arreglo */
+  const n = arr.length; /* Variable que reciba el parametro con el metodo length */
+  let sumPrimary = 0; /* Variable cambiable en 0 */
+  let sumSecondary = 0; /* Variable cambiable en 0 */
+
+  for (let i = 0; i < n; i++) { /* Defino una iteracion for, variable definida antes sera el condicional */
     // elemento de la diagonal izquierda-derecha: arr[i][i]
-    sumPrimary += arr[i][i];
+    sumPrimary += arr[i][i]; /* Variable que es una suma de todos sus 2 i  en cada posicion */
     // elemento de la diagonal derecha-izquierda: arr[i][n - 1 - i]
-    sumSecondary += arr[i][n - 1 - i];
+    sumSecondary += arr[i][n - 1 - i]; /* Suma que suma su posicion, menos 1 espacio, menos su valor en i viene de derecha */
   }
 
-  return Math.abs(sumPrimary - sumSecondary);
+  return Math.abs(sumPrimary - sumSecondary); /* Retornamos absoluto de la operacion aritmetica de resta de los elementos del for */
 }
 
 // Parseo del input en el formato HackerRank
