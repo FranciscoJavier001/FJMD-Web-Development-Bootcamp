@@ -19,9 +19,11 @@ function diagonalDifference(arr) { /* Defino funcion que recibe un arreglo */
 
 // Parseo del input en el formato HackerRank
 function parseInput(raw) {
-  // split por líneas y filtrar líneas vacías
-  const lines = raw.split(/\r?\n/).map(l => l.trim()).filter(l => l.length > 0);
-  if (lines.length === 0) return { error: 'Entrada vacía' };
+  
+  /* Declaro Variable, el argumento que recibi, separalo, donde sea un enter, crea un nuevo array, elimina los espacios al inicio y final */
+  const lines = raw.split(/\n/).map(l => l.trim()).filter(l => l.length > 0); /* Filtra los elementos del array nuevo que sen mayor a 0 */
+  console.log('Lines', lines); /* Recorrio el arreglo, osea ya lo tiene */
+  if (lines.length === 0) return { error: 'Entrada vacía' }; /* Si la variable lines es igual a 0 entonces retorna entrada vacia */
 
   const n = parseInt(lines[0], 10);
   if (isNaN(n)) return { error: 'Primera línea debe ser un entero (n).' };
@@ -74,3 +76,9 @@ document.addEventListener('DOMContentLoaded', () => {
     outputArea.textContent = '—';
   });
 });
+
+
+/* Examples */
+// const nombres = ["  Carlos  ", "Ana ", "  José", "Luisa"];
+// const limpios = nombres.map(l => l.trim())
+// console.log(limpios)
