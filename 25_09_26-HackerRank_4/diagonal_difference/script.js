@@ -25,9 +25,9 @@ function parseInput(raw) {
   console.log('Lines', lines); /* Recorrio el arreglo, osea ya lo tiene */
   if (lines.length === 0) return { error: 'Entrada vacía' }; /* Si la variable lines es igual a 0 entonces retorna entrada vacia */
 
-  const n = parseInt(lines[0], 10);
-  if (isNaN(n)) return { error: 'Primera línea debe ser un entero (n).' };
-  if (lines.length - 1 < n) return { error: `Se esperaban ${n} filas de matriz pero solo hay ${lines.length - 1}.` };
+  const n = parseInt(lines[0], 10); /* Variable que convierte a integral la variable lines en su posicion 0 y por buena practica el 10(evita fallos) */
+  if (isNaN(n)) return { error: 'Primera línea debe ser un entero (n).' }; /* Condicional, si no es numero n entonces regresa ese mensaje */
+  if (lines.length - 1 < n) return { error: `Se esperaban ${n} filas de matriz pero solo hay ${lines.length - 1}.` }; /* Condicional, si lineas es menor al final, buenas practicas */
 
   const arr = [];
   for (let i = 0; i < n; i++) {
