@@ -35,13 +35,13 @@ function parseInput(raw) {
     if (rowParts.length < n) { /* Condicional, si la constante definida es menor a el numero de posiciones del arreglo n */
       return { error: `La fila ${i+1} tiene menos de ${n} números.` }; /* Retornamos un error por falta de numeros */
     }
-    const row = rowParts.slice(0, n).map(x => parseInt(x, 10));
-    if (row.some(x => Number.isNaN(x))) {
-      return { error: `La fila ${i+1} contiene un valor no entero.` };
+    const row = rowParts.slice(0, n).map(x => parseInt(x, 10)); /* Definimos una nueva fila, tomamos cada valor en cada posicion, hacemos un nuevo arreglo con cada uno, lo convierto en integral y que agarre todo su valor */
+    if (row.some(x => Number.isNaN(x))) { /* Condicional de que si x no es un numero entero que lo bote todo */
+      return { error: `La fila ${i+1} contiene un valor no entero.` }; /* Lo que retorno */
     }
-    arr.push(row);
+    arr.push(row); /* En un nuevo array voy a agregar cada elemento del arreglo */
   }
-  return { n, arr };
+  return { n, arr }; /* Regreso el arreglo n y el arreglo arr */
 }
 
 // UI wiring
