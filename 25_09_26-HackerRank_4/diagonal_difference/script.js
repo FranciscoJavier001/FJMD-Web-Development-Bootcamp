@@ -25,15 +25,15 @@ function parseInput(raw) {
   console.log('Lines', lines); /* Recorrio el arreglo, osea ya lo tiene */
   if (lines.length === 0) return { error: 'Entrada vacía' }; /* Si la variable lines es igual a 0 entonces retorna entrada vacia */
 
-  const n = parseInt(lines[0], 10); /* Variable que convierte a integral la variable lines en su posicion 0 y por buena practica el 10(evita fallos) */
+  const n = parseInt(lines[0], 10); /* Numero de filas que va a tener el arreglo */
   if (isNaN(n)) return { error: 'Primera línea debe ser un entero (n).' }; /* Condicional, si no es numero n entonces regresa ese mensaje */
   if (lines.length - 1 < n) return { error: `Se esperaban ${n} filas de matriz pero solo hay ${lines.length - 1}.` }; /* Condicional, si lineas es menor al final, buenas practicas */
 
-  const arr = [];
-  for (let i = 0; i < n; i++) {
-    const rowParts = lines[1 + i].split(/\s+/).filter(s => s.length > 0);
-    if (rowParts.length < n) {
-      return { error: `La fila ${i+1} tiene menos de ${n} números.` };
+  const arr = []; /* Variable que inicializamos con un arreglo vacio */
+  for (let i = 0; i < n; i++) { /* Iteracion con variable, n es la condicional y que aumente i en cada iteracion */
+    const rowParts = lines[1 + i].split(/\s+/).filter(s => s.length > 0); /* Constante que son las lineas en cada una de sus posiciones, le separo con "" cada uno y filtro si la variable s es mayor o igual a 0 */
+    if (rowParts.length < n) { /* Condicional, si la constante definida es menor a el numero de posiciones del arreglo n */
+      return { error: `La fila ${i+1} tiene menos de ${n} números.` }; /* Retornamos un error por falta de numeros */
     }
     const row = rowParts.slice(0, n).map(x => parseInt(x, 10));
     if (row.some(x => Number.isNaN(x))) {
