@@ -44,16 +44,16 @@ function parseInput(raw) {
   return { n, arr }; /* Regreso el arreglo n y el arreglo arr */
 }
 
-// UI wiring
-document.addEventListener('DOMContentLoaded', () => {
-  const inputArea = document.getElementById('inputArea');
+/* UI */
+document.addEventListener('DOMContentLoaded', () => { /* Que carge primero todo el DOM */
+  const inputArea = document.getElementById('inputArea'); /* Le damos un id a los elementos del DOM */
   const outputArea = document.getElementById('outputArea');
   const runBtn = document.getElementById('runBtn');
   const sampleBtn = document.getElementById('sampleBtn');
   const clearBtn = document.getElementById('clearBtn');
 
-  runBtn.addEventListener('click', () => {
-    outputArea.textContent = 'Ejecutando...';
+  runBtn.addEventListener('click', () => { /* Variable que le asignamos el evento click */
+    outputArea.textContent = 'Ejecutando...'; /* Simplemente le damos un texto */
     try {
       const parsed = parseInput(inputArea.value);
       if (parsed.error) {
