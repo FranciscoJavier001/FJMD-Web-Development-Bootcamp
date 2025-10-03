@@ -54,10 +54,10 @@ document.addEventListener('DOMContentLoaded', () => { /* Que carge primero todo 
 
   runBtn.addEventListener('click', () => { /* Variable que le asignamos el evento click */
     outputArea.textContent = 'Ejecutando...'; /* Simplemente le damos un texto */
-    try {
-      const parsed = parseInput(inputArea.value);
-      if (parsed.error) {
-        outputArea.textContent = 'Error: ' + parsed.error;
+    try { /* Condicional */
+      const parsed = parseInput(inputArea.value); /* Lo que este escrito en el area del input hay que hacerlo un valor del input */
+      if (parsed.error) { /* Pero si no se puede porque hay una letra o algo */
+        outputArea.textContent = 'Error: ' + parsed.error; /* Esto es lo que lanzamos en el area negra de la salida */
         return;
       }
       const result = diagonalDifference(parsed.arr);
