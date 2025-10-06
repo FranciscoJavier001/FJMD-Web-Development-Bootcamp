@@ -60,10 +60,10 @@ document.addEventListener('DOMContentLoaded', () => { /* Que carge primero todo 
         outputArea.textContent = 'Error: ' + parsed.error; /* Esto es lo que lanzamos en el area negra de la salida */
         return;
       }
-      const result = diagonalDifference(parsed.arr);
-      outputArea.textContent = String(result);
-    } catch (err) {
-      outputArea.textContent = 'Excepción: ' + (err && err.message ? err.message : String(err));
+      const result = diagonalDifference(parsed.arr); /* parsed que es un input lo hacemos un arreglo, metodo de diferencia diagonal es el resultado */
+      outputArea.textContent = String(result); /* El area negra de hasta abajo ahi sale la salida */
+    } catch (err) { /* Para que no se termine el programa */
+      outputArea.textContent = 'Excepción: ' + (err && err.message ? err.message : String(err)); /* Lanzamos la excepcion en la caja de texto */
     }
   });
 
