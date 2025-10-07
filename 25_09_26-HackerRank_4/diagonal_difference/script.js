@@ -67,18 +67,12 @@ document.addEventListener('DOMContentLoaded', () => { /* Que carge primero todo 
     }
   });
 
-  sampleBtn.addEventListener('click', () => {
-    inputArea.value = '3\n11 2 4\n4 5 6\n10 8 -12';
+  sampleBtn.addEventListener('click', () => { /* Le damos una utilidad al boton en el evento click */
+    inputArea.value = '3\n11 2 4\n4 5 6\n10 8 -12'; /* En el area blanca, ahi se muestra este input como ejemplo */
   });
 
-  clearBtn.addEventListener('click', () => {
-    inputArea.value = '';
-    outputArea.textContent = '—';
+  clearBtn.addEventListener('click', () => { /* Le damos un evento al click a este boton */
+    inputArea.value = ''; /* No mostramos nada */
+    outputArea.textContent = '—'; /* Es lo que sale hasta que le damos una accion al boton */
   });
 });
-
-
-/* Examples */
-// const nombres = ["  Carlos  ", "Ana ", "  José", "Luisa"];
-// const limpios = nombres.map(l => l.trim())
-// console.log(limpios)
