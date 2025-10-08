@@ -1,7 +1,5 @@
 'use strict';
 
-
-
 function diagonalDifference(arr) { /* Defino funcion que recibe un arreglo */
   const n = arr.length; /* Variable que reciba el parametro con el metodo length */
   let sumPrimary = 0; /* Variable cambiable en 0 */
