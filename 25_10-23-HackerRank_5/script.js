@@ -1,18 +1,18 @@
 // Plus Minus Challenge
 // ---------------------------------------
 
-function plusMinus(arr) {
-  const n = arr.length;
+function plusMinus(arr) { /* Declaramos una funcion que recibe un parametro */
+  const n = arr.length; /* Valor que es el tamaño del parametro que recibimos */
 
-  let positives = 0;
-  let negatives = 0;
-  let zeros = 0;
+  let positives = 0; /* Variable que puede cambiar */
+  let negatives = 0; /* Variable que puede cambiar */
+  let zeros = 0; /* Variable que puede cambiar */
 
   // Contar positivos, negativos y ceros
-  arr.forEach(num => {
-    if (num > 0) positives++;
-    else if (num < 0) negatives++;
-    else zeros++;
+  arr.forEach(num => { /* Del arreglo recibido, para cada elemento, recibe un arametro y su funcionamiento */
+    if (num > 0) positives++; /* Si num es mayor a 0 entonces sube uno a variable posotives */
+    else if (num < 0) negatives++; /* Pero si es menor a o, entonces sube los negatives */
+    else zeros++; /* Si no es ninguno de los casos entonces solamente sube en 1 los zeros */
   });
 
   // Calcular proporciones
