@@ -16,15 +16,18 @@ function plusMinus(arr) { /* Declaramos una funcion que recibe un parametro */
   });
 
   // Calcular proporciones
-  const posRatio = (positives / n).toFixed(6);
-  const negRatio = (negatives / n).toFixed(6);
-  const zeroRatio = (zeros / n).toFixed(6);
+  const posRatio = (positives / n).toFixed(3); /* Definimos variable, que sea una operacion aritmetica y tofixed para mostrar los numeros despues del puntoi */
+  const negRatio = (negatives / n).toFixed(3);
+  const zeroRatio = (zeros / n).toFixed(3);
 
-  console.log(posRatio);
+  console.log(posRatio); /* Mostramos en consola el resultado de la operacion aritmetica */
   console.log(negRatio);
   console.log(zeroRatio);
 }
 
 // Ejemplo de prueba
-const arr = [-4, 3, -9, 0, 4, 1];
-plusMinus(arr);
+const arr = [-4, 3, -9, 0, 4, 1]; /* Es simplemente el nombre de la variable pero puede ser cualquiera */
+plusMinus(arr); /* Llamamos a la aplicacion y le pasamos un argumento */
+
+const arr1 = [-4, 3, -9, 0, 4, 1, 1, 2, 3, 4, 5, 6, 7, 8, 9, 9]; /* Es simplemente el nombre de la variable pero puede ser cualquiera */
+plusMinus(arr1); /* Llamamos a la aplicacion y le pasamos un argumento */
