@@ -3,12 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Plus Minus Challenge</title>
+  <title>Plus Minus</title>
 </head>
-<body style="font-family: sans-serif; background-color: #f4f4f4; padding: 20px;">
-  <h2>Plus Minus Challenge (HackerRank Style)</h2>
-  <p>Abre la consola (F12) para ver los resultados.</p>
+<body>
+  <h2>Calculadora PlusMinus</h2>
 
-  <script src="script.js"></script> <!-- Vinculamos Script -->
+  <label for="numbers">Ingresa los números separados por espacios:</label><br>
+  <input type="text" id="numbers" placeholder="Ejemplo: 1 -2 0 3 -1 0"><br><br>
+
+  <button onclick="handlePlusMinus()">Calcular</button>
+
+  <h3>Resultados:</h3>
+  <p>Positivos: <span id="positives"></span></p>
+  <p>Negativos: <span id="negatives"></span></p>
+  <p>Ceros: <span id="zeros"></span></p>
+  <h3>Resultados Numeros:</h3>
+  <p>Positivos: <span id="allPositives"></span></p>
+  <p>Negativos: <span id="allNegatives"></span></p>
+  <p>Ceros: <span id="allZeros"></span></p>
+
+  <script>
+    const plusMinus = (arr) => {
+      const num = arr.length;
+      let positives = 0;
+      let negatives = 0;
+      let zeros = 0;
+
+      arr.forEach(n => {
+        if (n > 0) positives++;
+        else if (n < 0) negatives++;
+        else zeros++;
+      });
+
+      const posRatio = (positives / num).toFixed(2);
+      const negRatio = (negatives / num).toFixed(2);
+      const zeroRatio = (zeros / num).toFixed(2);
+
+      const allPositives = positives
+      const allNegatives = negatives
+      const allZeros = zeros
+
+      // Mostramos los resultados en el HTML
+      document.getElementById("positives").textContent = posRatio
+      document.getElementById("negatives").textContent = negRatio;
+      document.getElementById("zeros").textContent = zeroRatio;
+      document.getElementById("allPositives").textContent = allPositives
+      document.getElementById("allNegatives").textContent = allNegatives;
+      document.getElementById("allZeros").textContent = allZeros;
+    };
+
+    const handlePlusMinus = () => {
+      const input = document.getElementById("numbers").value.trim();
+      if (!input) {
+        alert("Por favor ingresa algunos números.");
+        return;
+      }
+      // Convertimos el texto en un arreglo de números
+      const arr = input.split(" ").map(Number);
+      plusMinus(arr);
+    };
+  </script>
 </body>
 </html>
