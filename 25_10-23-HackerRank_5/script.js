@@ -73,5 +73,3 @@ El Promedio de los positivos son los numeros positivos, entre todos los numeros,
 
 Muestra sus resultados en consola
 */
-
-Nuevo rquisito, quiero ser yo la persona que le pueda ingresar los numeros a un input
