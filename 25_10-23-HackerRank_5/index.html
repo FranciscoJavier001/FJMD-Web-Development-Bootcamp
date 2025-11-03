@@ -3,64 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Plus Minus</title>
+  <title>Plus Minus</title> <!-- Titulo Pestaña -->
 </head>
 <body>
-  <h2>Calculadora PlusMinus</h2>
+  <h2>Calculadora PlusMinus</h2> <!-- Titulo en el DOM -->
 
-  <label for="numbers">Ingresa los números separados por espacios:</label><br>
-  <input type="text" id="numbers" placeholder="Ejemplo: 1 -2 0 3 -1 0"><br><br>
+  <label for="numbers">Ingresa los números separados por espacios:</label><br> <!-- Una etiqueta que es un texto en el DOM -->
+  <input type="text" id="numbers" placeholder="Ejemplo: 1 -2 0 3 -1 0"><br><br> <!-- Campo de Texto, tipo texto, id, un mensaje dentro, espacios hacia abajo -->
 
-  <button onclick="handlePlusMinus()">Calcular</button>
+  <button onclick="handlePlusMinus()">Calcular</button> <!-- Ponemos un boton, que llame una funcion y ejecute con el texto Calcular -->
 
-  <h3>Resultados:</h3>
-  <p>Positivos: <span id="positives"></span></p>
-  <p>Negativos: <span id="negatives"></span></p>
-  <p>Ceros: <span id="zeros"></span></p>
-  <h3>Resultados Numeros:</h3>
-  <p>Positivos: <span id="allPositives"></span></p>
-  <p>Negativos: <span id="allNegatives"></span></p>
-  <p>Ceros: <span id="allZeros"></span></p>
+  <h3>Resultados:</h3> <!-- Titulo DOM -->
+  <p>Positivos: <span id="positives"></span></p> <!-- Texto en el DOM con un ip -->
+  <p>Negativos: <span id="negatives"></span></p> <!-- Texto en el DOM con un ip -->
+  <p>Ceros: <span id="zeros"></span></p> <!-- Texto en el DOM con un ip -->
+  <h3>Resultados Numeros:</h3> <!-- Titulo en el DOM -->
+  <p>Positivos: <span id="allPositives"></span></p> <!-- Texto en el DOM con un ip -->
+  <p>Negativos: <span id="allNegatives"></span></p> <!-- Texto en el DOM con un ip -->
+  <p>Ceros: <span id="allZeros"></span></p> <!-- Texto en el DOM con un ip -->
 
-  <script>
-    const plusMinus = (arr) => {
-      const num = arr.length;
-      let positives = 0;
-      let negatives = 0;
-      let zeros = 0;
+  <script> /* Scripts */
+    const plusMinus = (arr) => { /* Definimos una funcion que recibe un argumento */
+      const num = arr.length; /* Definimos una variable que recorra todo el argumento recibido */
+      let positives = 0; /* Inicializamos una variable en 0 */
+      let negatives = 0; /* Inicializamos una variable en 0 */
+      let zeros = 0; /* Inicializamos una variable en 0 */
 
-      arr.forEach(n => {
-        if (n > 0) positives++;
-        else if (n < 0) negatives++;
-        else zeros++;
+      arr.forEach(n => { /* El argumento recibido va a recorrer cada una de sus posiciones y va a recibir un numero que va a seguir estas intrucciones */
+        if (n > 0) positives++; /* Si el numero que se recibe es mayor a 0, entonces suma 1 a la variable definida positives */
+        else if (n < 0) negatives++; /* Pero si el numero que se recibe es menor a 0, entonces suma 1 a la variable definida negatives */
+        else if (n === 0) zeros++; /* Pero si n el 0 sumale 1 a 0 */
       });
 
-      const posRatio = (positives / num).toFixed(2);
-      const negRatio = (negatives / num).toFixed(2);
-      const zeroRatio = (zeros / num).toFixed(2);
+      const posRatio = (positives / num).toFixed(2); /* Vamos a definir una variable que sea positives entre la cantidad de numeros y me das el porcentaje */
+      const negRatio = (negatives / num).toFixed(2); /* Vamos a definir una variable que sea negatives entre la cantidad de numeros y me das el porcentaje */
+      const zeroRatio = (zeros / num).toFixed(2); /* Vamos a definir una variable que sea zeros entre la cantidad de numeros y me das el porcentaje */
 
-      const allPositives = positives
-      const allNegatives = negatives
-      const allZeros = zeros
+      const allPositives = positives /* Definimos una variable que sea una variable igual a positives */
+      const allNegatives = negatives /* Definimos una variable que sea una variable igual a negatives */
+      const allZeros = zeros /* Definimos una variable que sea una variable igual a zeros */
 
       // Mostramos los resultados en el HTML
-      document.getElementById("positives").textContent = posRatio
-      document.getElementById("negatives").textContent = negRatio;
-      document.getElementById("zeros").textContent = zeroRatio;
-      document.getElementById("allPositives").textContent = allPositives
-      document.getElementById("allNegatives").textContent = allNegatives;
-      document.getElementById("allZeros").textContent = allZeros;
+      document.getElementById("positives").textContent = posRatio /* En el Dom, Un elemento por id, variable antes definida, muestro resultado operacion aritmetica */
+      document.getElementById("negatives").textContent = negRatio; /* En el Dom, Un elemento por id, variable antes definida, muestro resultado operacion aritmetica */
+      document.getElementById("zeros").textContent = zeroRatio; /* En el Dom, Un elemento por id, variable antes definida, muestro resultado operacion aritmetica */
+      document.getElementById("allPositives").textContent = allPositives /* En el Dom, Un elemento por id, variable antes definida, muestro valor variable */
+      document.getElementById("allNegatives").textContent = allNegatives; /* En el Dom, Un elemento por id, variable antes definida, muestro valor variable */
+      document.getElementById("allZeros").textContent = allZeros; /* En el Dom, Un elemento por id, variable antes definida, muestro valor variable */
     };
 
-    const handlePlusMinus = () => {
-      const input = document.getElementById("numbers").value.trim();
-      if (!input) {
-        alert("Por favor ingresa algunos números.");
-        return;
+    const handlePlusMinus = () => { /* Defino una funcion, que no recibe nada */
+      const input = document.getElementById("numbers").value.trim(); /* Definimos una variable, seleccionamos el elemento por id, sus valores separados por espacios */
+      console.log(input); /* Mostramos el input en consola */
+      if (!input) { /* Si input esta vacio */
+        alert("Por favor ingresa algunos números."); /* Mostramos un alert */
+        return; /* No retormamos nada */
       }
       // Convertimos el texto en un arreglo de números
-      const arr = input.split(" ").map(Number);
-      plusMinus(arr);
+      const arr = input.split(" ").map(Number); /* Nueva variavle, que los separe por espacio, que los mapee (haga nuevos la variable) y arroje numeros */
+      plusMinus(arr); /* Mando llamar la funcion, y le paso el argumento que ya defini que son solo numeros */
     };
   </script>
 </body>
