@@ -106,6 +106,25 @@ function readLine() {
 
 function plusMinus(arr) {
     // Write your code here
+    const n = arr.length;
+
+    let positives = 0
+    let negatives = 0
+    let zeros = 0
+
+    arr.forEach(x => {
+        if (x > 0) positives++
+        if (x > 0) negatives++
+        else zeros++
+    })
+
+    const posRatio = (positives / n).toFixed(6)
+    const negRatio = (negatives /n).toFixed(6)
+    const zeroRatio = (zeros / n).toFixed(6)
+
+    console.log(posRatio);
+    console.log(negRatio);
+    console.log(zeroRatio);
 
 }
 
@@ -116,3 +135,4 @@ function main() {
 
     plusMinus(arr);
 }
+
