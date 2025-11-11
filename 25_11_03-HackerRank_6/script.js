@@ -1,11 +1,12 @@
-function staircase(n) {
-  let result = "";
-  for (let i = 1; i <= n; i++) {
-    const spaces = " ".repeat(n - i);
-    const hashes = "#".repeat(i);
-    result += spaces + hashes + "\n";
+function staircase(n) { /* Definimos una funcion que reciba un parametro */
+  let result = ""; /* Inicializamos una variable vacia */
+
+  for (let i = 1; i <= n; i++) { /* Creamos una Iteracion */
+    const spaces = " ".repeat(n - i); /* Variable, que inicalizamos con un espacio, repetimos hasta el final del parametro recibido hasta el final */
+    const hashes = "#".repeat(i); /* Variable que es un signo # y la repetimos el numero de veces que i sale */
+    result += spaces + hashes + "\n"; /* Resultado = resultado + spaces + hashes y hacemos un salto de linea */
   }
-  return result;
+  return result; /* Retorno Resultado */
 }
 
 function drawStaircase() {
