@@ -9,12 +9,12 @@ function staircase(n) { /* Definimos una funcion que reciba un parametro */
   return result; /* Retorno Resultado */
 }
 
-function drawStaircase() {
-  const n = parseInt(document.getElementById("size").value);
-  const output = document.getElementById("output");
-  if (isNaN(n) || n <= 0) {
-    output.textContent = "Por favor ingresa un número válido mayor a 0.";
-    return;
+function drawStaircase() { /* Definimos una funcion que no recibe nada */
+  const n = parseInt(document.getElementById("size").value); /* Variale, que es el entero del did id del documento dom, su valor metodo */
+  const output = document.getElementById("output"); /* Variable se muestra en el output */
+  if (isNaN(n) || n <= 0) { /* Validacion, si el elemento del dom numero n, id valor, y n sea menor a igual a 0 */
+    output.textContent = "Por favor ingresa un número válido mayor a 0."; /* Retorna en el output del texto que diga un tipo alert */
+    return; /* Retornamos este texto  */
   }
-  output.textContent = staircase(n);
+  output.textContent = staircase(n); /* Pero si no, solo saca la funcion de starcase de n que es side */
 }
