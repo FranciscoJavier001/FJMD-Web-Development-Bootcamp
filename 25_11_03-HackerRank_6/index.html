@@ -54,7 +54,13 @@
     <input type="number" id="size" min="1" max="100" value="6" /> <!-- Input, campo de texto -->
     <button onclick="drawStaircase()">Generar</button> <!-- Boton que ejecuta una funcion -->
   </div>
+  <div>
+    <label for="nameInput">Nombre: </label> <!-- Etiqueta nombre -->
+    <input type="text" id="nameInput" placeholder="Tu nombre" /> <!-- Input texto -->
+    <button onclick="mostrarBienvenida()">Saludar</button> <!-- Boton saludo -->
+  </div>
   <pre id="output"></pre> <!-- Una etiqueta con un ID -->
+  <p id="greeting"></p> <!-- Mensaje de bienvenida -->
 
   <script src="script.js"></script> <!-- Script a Ejecutar -->
 </body>

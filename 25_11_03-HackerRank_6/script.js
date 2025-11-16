@@ -18,3 +18,25 @@ function drawStaircase() { /* Definimos una funcion que no recibe nada */
   }
   output.textContent = staircase(n); /* Pero si no, solo saca la funcion de starcase de n que es side */
 }
+
+function obtenerNombre(nombre) { /* Recibe un parámetro y regresa el nombre limpio */
+  if (typeof nombre !== "string") { /* Validamos que el parámetro sea un texto */
+    throw new Error("El parámetro debe ser un string"); /* Lanzamos error si no lo es */
+  }
+  return nombre.trim(); /* Devolvemos el string sin espacios extra */
+}
+
+function mostrarBienvenida() { /* Lee el input, limpia el nombre y muestra mensaje */
+  const input = document.getElementById("nameInput"); /* Referencia al input */
+  const greeting = document.getElementById("greeting"); /* Zona para el mensaje */
+  try {
+    const nombre = obtenerNombre(input.value); /* Obtenemos el nombre ya limpio */
+    if (!nombre) { /* Validamos que no esté vacío */
+      greeting.textContent = "Por favor ingresa un nombre válido."; /* Mostramos aviso */
+      return;
+    }
+    greeting.textContent = `Bienvenido ${nombre}`; /* Mensaje final */
+  } catch (error) {
+    greeting.textContent = error.message; /* Si ocurre algo se muestra el error */
+  }
+}
