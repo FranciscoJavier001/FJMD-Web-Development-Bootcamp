@@ -40,3 +40,44 @@ function mostrarBienvenida() { /* Lee el input, limpia el nombre y muestra mensa
     greeting.textContent = error.message; /* Si ocurre algo se muestra el error */
   }
 }
+
+
+'use strict';
+
+process.stdin.resume();
+process.stdin.setEncoding('utf-8');
+
+let inputString = '';
+let currentLine = 0;
+
+process.stdin.on('data', function (inputStdin) {
+    inputString += inputStdin;
+});
+
+process.stdin.on('end', function () {
+    inputString = inputString.split('\n');
+    main();
+});
+
+function readLine() {
+    return inputString[currentLine++];
+}
+
+/*
+ * Complete the 'staircase' function below.
+ *
+ * The function accepts INTEGER n as parameter.
+ */
+
+function staircase(n) { /* Declaramos una funcion que reciba un argumento */
+    for (let i = 1; i <= n; i++) { /* Iteracion For, hasta tener los mismos numeros que n */
+        const spaces = ' '.repeat(n - i); /* Repetimos los espacios hasta la ultima posicion */
+        const hashes = '#'.repeat(i); /* Repetimos los # toda la iteracion de i */
+        console.log(spaces + hashes); /* Mostramos en consola los espacios y los # */
+    }
+}
+
+function main() {
+    const n = parseInt(readLine().trim(), 10);
+    staircase(n);
+}
